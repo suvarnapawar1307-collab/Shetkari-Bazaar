@@ -1,0 +1,4 @@
+node_modules/
+.env
+mandi_data.json
+sample_response.json
