@@ -90,7 +90,7 @@ async function main() {
   let totalSaved = 0;
 
   // Fetch last 5 days — API has 2-3 day lag so this ensures full coverage
-  for (let daysAgo = 1; daysAgo <= 5; daysAgo++) {
+  for (let daysAgo = 1; daysAgo <= 7; daysAgo++) {
     const date = getDateString(daysAgo);
     console.log(`\n📅 Fetching ${date}...`);
     let dayTotal = 0;
