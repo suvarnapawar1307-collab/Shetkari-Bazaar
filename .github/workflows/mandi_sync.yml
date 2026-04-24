@@ -1,0 +1,27 @@
+name: Mandi Rates Sync
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # रोज रात्री 2 वाजता (IST 7:30 AM)
+  workflow_dispatch:        # we can Manual trigger पण करता येतो
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Mandi Sync
+        env:
+          MANDI_API_KEY: ${{ secrets.MANDI_API_KEY }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node sync.js
