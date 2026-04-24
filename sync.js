@@ -73,6 +73,8 @@ async function fetchWithRetry(url, retries = 3) {
     }
   }
 }
+
+function makeId(commodity, market, date) {
   return `${commodity}_${market}_${date}`
     .replace(/\s+/g, "_")
     .replace(/\//g, "-");
