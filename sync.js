@@ -59,7 +59,20 @@ function getDateString(daysAgo) {
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
-function makeId(commodity, market, date) {
+// ── Fetch with retry ─────────────────────────────────────────
+async function fetchWithRetry(url, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const response = await axios.get(url, { timeout: 60000 });
+      return response.data;
+    } catch (e) {
+      if (i === retries - 1) throw e;
+      const wait = (i + 1) * 2000; // 2s, 4s backoff
+      console.log(`  ⚠️ Retry ${i + 1} after ${wait}ms...`);
+      await sleep(wait);
+    }
+  }
+}
   return `${commodity}_${market}_${date}`
     .replace(/\s+/g, "_")
     .replace(/\//g, "-");
@@ -83,11 +96,11 @@ async function main() {
     let dayTotal = 0;
 
     for (const district of MAHARASHTRA_DISTRICTS) {
-      await sleep(300); // avoid 429 rate limit
+      await sleep(300);
       let offset = 0;
       const limit = 500;
-
-      while (true) {
+      try {
+        while (true) {
         const url =
           `${API_BASE}?api-key=${apiKey}&format=json` +
           `&filters[State]=Maharashtra` +
@@ -95,8 +108,7 @@ async function main() {
           `&filters[Arrival_Date]=${date}` +
           `&limit=${limit}&offset=${offset}`;
 
-        const response = await axios.get(url, { timeout: 20000 });
-        const data = response.data;
+        const data = await fetchWithRetry(url);
         const records = data?.records ?? [];
         const apiTotal = parseInt(data?.total ?? 0);
 
@@ -133,6 +145,9 @@ async function main() {
 
         offset += limit;
         if (offset >= apiTotal) break;
+        }
+      } catch (e) {
+        console.log(`  ⚠️ ${district}: ${e.message} — skipping`);
       }
     }
 
