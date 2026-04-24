@@ -18,6 +18,27 @@ const db = admin.firestore();
 const API_BASE =
   "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24";
 
+// ── Delete records older than 7 days ─────────────────────────
+async function deleteOldRecords() {
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 7);
+  console.log(`🗑️  Deleting records older than ${cutoff.toDateString()}...`);
+  let deleted = 0;
+
+  // Run multiple batches until all old records are gone
+  while (true) {
+    const snap = await db.collection("mandi_rates")
+      .where("updatedAt", "<", admin.firestore.Timestamp.fromDate(cutoff))
+      .limit(400)
+      .get();
+    if (snap.empty) break;
+    const batch = db.batch();
+    snap.docs.forEach(d => { batch.delete(d.ref); deleted++; });
+    await batch.commit();
+  }
+  console.log(`   ✅ Deleted ${deleted} old records.`);
+}
+
 // ── Helpers ───────────────────────────────────────────────────
 function getDateString(daysAgo) {
   const d = new Date();
@@ -103,6 +124,9 @@ async function main() {
 
     console.log(`  ✅ ${date}: ${dayTotal} records`);
   }
+
+  // Delete old records (older than 7 days)
+  await deleteOldRecords();
 
   // Write sync metadata
   await db.collection("mandi_meta").doc("last_sync").set({
