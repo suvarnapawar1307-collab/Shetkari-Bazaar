@@ -73,61 +73,67 @@ async function main() {
     process.exit(1);
   }
 
-  console.log("🌾 Starting Mandi Rates sync (last 5 days)...");
+  console.log("🌾 Starting Mandi Rates sync (last 3 days)...");
   let totalSaved = 0;
 
+  // Fetch last 5 days — API has 2-3 day lag so this ensures full coverage
   for (let daysAgo = 1; daysAgo <= 5; daysAgo++) {
     const date = getDateString(daysAgo);
     console.log(`\n📅 Fetching ${date}...`);
     let dayTotal = 0;
-    let offset = 0;
-    const limit = 500;
 
-    // Single call with State filter — no District needed
-    while (true) {
-      const url =
-        `${API_BASE}?api-key=${apiKey}&format=json` +
-        `&filters[State]=Maharashtra` +
-        `&filters[Arrival_Date]=${date}` +
-        `&limit=${limit}&offset=${offset}`;
+    for (const district of MAHARASHTRA_DISTRICTS) {
+      await sleep(300); // avoid 429 rate limit
+      let offset = 0;
+      const limit = 500;
 
-      const response = await axios.get(url, { timeout: 20000 });
-      const data = response.data;
-      const records = data?.records ?? [];
-      const apiTotal = parseInt(data?.total ?? 0);
+      while (true) {
+        const url =
+          `${API_BASE}?api-key=${apiKey}&format=json` +
+          `&filters[State]=Maharashtra` +
+          `&filters[District]=${encodeURIComponent(district)}` +
+          `&filters[Arrival_Date]=${date}` +
+          `&limit=${limit}&offset=${offset}`;
 
-      if (records.length === 0) break;
+        const response = await axios.get(url, { timeout: 20000 });
+        const data = response.data;
+        const records = data?.records ?? [];
+        const apiTotal = parseInt(data?.total ?? 0);
 
-      const batch = db.batch();
-      for (const r of records) {
-        const commodity  = r.Commodity || "";
-        const market     = r.Market    || "";
-        const dist       = r.District  || "";
-        const variety    = r.Variety   || "";
-        const arrDate    = r.Arrival_Date || "";
-        const minPrice   = parseFloat(r.Min_Price    || 0);
-        const maxPrice   = parseFloat(r.Max_Price    || 0);
-        const avgPrice   = parseFloat(r.Modal_Price  || 0);
-        const arrivalQtl = parseFloat(r.Arrivals_in_Qtl || 0);
+        if (records.length === 0) break;
 
-        if (!commodity || !market) continue;
+        // Firestore batch write (max 500)
+        const batch = db.batch();
+        for (const r of records) {
+          const commodity  = r.Commodity || "";
+          const market     = r.Market    || "";
+          const dist       = r.District  || "";
+          const variety    = r.Variety   || "";
+          const arrDate    = r.Arrival_Date || "";
+          const minPrice   = parseFloat(r.Min_Price    || 0);
+          const maxPrice   = parseFloat(r.Max_Price    || 0);
+          const avgPrice   = parseFloat(r.Modal_Price  || 0);
+          const arrivalQtl = parseFloat(r.Arrivals_in_Qtl || 0);
 
-        const id = makeId(commodity, market, arrDate);
-        batch.set(
-          db.collection("mandi_rates").doc(id),
-          { commodity, market, district: dist, variety,
-            minPrice, maxPrice, avgPrice, arrivalQtl,
-            date: arrDate,
-            updatedAt: admin.firestore.FieldValue.serverTimestamp() },
-          { merge: true }
-        );
-        dayTotal++;
-        totalSaved++;
+          if (!commodity || !market) continue;
+
+          const id = makeId(commodity, market, arrDate);
+          batch.set(
+            db.collection("mandi_rates").doc(id),
+            { commodity, market, district: dist, variety,
+              minPrice, maxPrice, avgPrice, arrivalQtl,
+              date: arrDate,
+              updatedAt: admin.firestore.FieldValue.serverTimestamp() },
+            { merge: true }
+          );
+          dayTotal++;
+          totalSaved++;
+        }
+        await batch.commit();
+
+        offset += limit;
+        if (offset >= apiTotal) break;
       }
-      await batch.commit();
-
-      offset += limit;
-      if (offset >= apiTotal) break;
     }
 
     console.log(`  ✅ ${date}: ${dayTotal} records`);
