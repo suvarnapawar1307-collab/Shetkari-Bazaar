@@ -17,8 +17,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Check Node version
+        run: node --version
+
       - name: Install dependencies
-        run: npm install
+        run: rm -f package-lock.json && npm install
 
       - name: Run Mandi Sync
         env:
