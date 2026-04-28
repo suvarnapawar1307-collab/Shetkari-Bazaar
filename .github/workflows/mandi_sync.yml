@@ -22,6 +22,5 @@ jobs:
 
       - name: Run Mandi Sync
         env:
-          MANDI_API_KEY: ${{ secrets.MANDI_API_KEY }}
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-        run: node sync.js
+        run: node scraper.js
