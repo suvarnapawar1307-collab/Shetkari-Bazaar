@@ -20,109 +20,116 @@ const HEADERS = {
   "Referer": `${BASE}/ApmcDetail/APMCPriceInformation`,
 };
 
-// APMC Code → District mapping
-const APMC_DISTRICT = {
-  // Ahmednagar
-  "001":"Ahmednagar","030":"Ahmednagar","031":"Ahmednagar","032":"Ahmednagar",
-  "033":"Ahmednagar","034":"Ahmednagar","035":"Ahmednagar","036":"Ahmednagar",
-  "037":"Ahmednagar","038":"Ahmednagar","039":"Ahmednagar","040":"Ahmednagar",
-  "041":"Ahmednagar","042":"Ahmednagar","043":"Ahmednagar","044":"Ahmednagar",
-  // Akola
-  "010":"Akola","011":"Akola","012":"Akola","013":"Akola","014":"Akola",
-  // Amravati
-  "079":"Amravati","080":"Amravati","081":"Amravati","082":"Amravati",
-  "083":"Amravati","084":"Amravati","085":"Amravati",
-  // Aurangabad / Chhatrapati Sambhajinagar
-  "020":"Aurangabad","021":"Aurangabad","022":"Aurangabad","023":"Aurangabad",
-  "024":"Aurangabad","025":"Aurangabad",
-  // Beed
-  "050":"Beed","051":"Beed","052":"Beed","053":"Beed","054":"Beed","055":"Beed",
-  // Bhandara
-  "060":"Bhandara","061":"Bhandara","062":"Bhandara",
-  // Buldhana
-  "070":"Buldhana","071":"Buldhana","072":"Buldhana","073":"Buldhana","074":"Buldhana",
-  // Chandrapur
-  "090":"Chandrapur","091":"Chandrapur","092":"Chandrapur","093":"Chandrapur",
-  // Dhule
-  "100":"Dhule","101":"Dhule","102":"Dhule",
-  // Gadchiroli
-  "110":"Gadchiroli","111":"Gadchiroli",
-  // Gondia
-  "120":"Gondia","121":"Gondia","122":"Gondia",
-  // Hingoli
-  "130":"Hingoli","131":"Hingoli","132":"Hingoli",
-  // Jalgaon
-  "140":"Jalgaon","141":"Jalgaon","142":"Jalgaon","143":"Jalgaon","144":"Jalgaon",
-  "145":"Jalgaon","146":"Jalgaon",
-  // Jalna
-  "150":"Jalna","151":"Jalna","152":"Jalna","153":"Jalna",
-  // Kolhapur
-  "160":"Kolhapur","161":"Kolhapur","162":"Kolhapur","163":"Kolhapur","164":"Kolhapur",
-  // Latur
-  "170":"Latur","171":"Latur","172":"Latur","173":"Latur","174":"Latur",
-  // Mumbai
-  "180":"Mumbai","181":"Mumbai",
-  // Nagpur
-  "190":"Nagpur","191":"Nagpur","192":"Nagpur","193":"Nagpur","194":"Nagpur",
-  // Nanded
-  "200":"Nanded","201":"Nanded","202":"Nanded","203":"Nanded","204":"Nanded",
-  // Nandurbar
-  "147":"Nandurbar","210":"Nandurbar","211":"Nandurbar","212":"Nandurbar",
-  // Nashik
-  "220":"Nashik","221":"Nashik","222":"Nashik","223":"Nashik","224":"Nashik",
-  "225":"Nashik","226":"Nashik","227":"Nashik","228":"Nashik","229":"Nashik",
-  // Osmanabad / Dharashiv
-  "230":"Osmanabad","231":"Osmanabad","232":"Osmanabad","233":"Osmanabad",
-  // Palghar
-  "240":"Palghar","241":"Palghar","242":"Palghar",
-  // Parbhani
-  "250":"Parbhani","251":"Parbhani","252":"Parbhani","253":"Parbhani",
-  // Pune
-  "260":"Pune","261":"Pune","262":"Pune","263":"Pune","264":"Pune",
-  "265":"Pune","266":"Pune","267":"Pune","268":"Pune","269":"Pune",
-  // Raigad
-  "270":"Raigad","271":"Raigad","272":"Raigad","273":"Raigad",
-  // Ratnagiri
-  "280":"Ratnagiri","281":"Ratnagiri","282":"Ratnagiri",
-  // Sangli
-  "290":"Sangli","291":"Sangli","292":"Sangli","293":"Sangli","294":"Sangli",
-  // Satara
-  "300":"Satara","301":"Satara","302":"Satara","303":"Satara","304":"Satara",
-  // Sindhudurg
-  "310":"Sindhudurg","311":"Sindhudurg",
-  // Solapur
-  "001":"Solapur", // Akluj is Solapur
-  "320":"Solapur","321":"Solapur","322":"Solapur","323":"Solapur","324":"Solapur",
-  // Thane
-  "330":"Thane","331":"Thane","332":"Thane",
-  // Wardha
-  "340":"Wardha","341":"Wardha","342":"Wardha","343":"Wardha",
-  // Washim
-  "350":"Washim","351":"Washim","352":"Washim",
-  // Yavatmal
-  "360":"Yavatmal","361":"Yavatmal","362":"Yavatmal","363":"Yavatmal","364":"Yavatmal",
-};
-
-// Better approach: derive district from APMC Marathi name
+// APMC Name → District mapping (complete)
 const APMC_NAME_TO_DISTRICT = {
-  "अकलुज":"Solapur","अकोला":"Akola","अकोले":"Ahmednagar","अक्कलकुआ":"Nandurbar",
-  "अचलपूर":"Amravati","अमरावती":"Amravati","अहमदनगर":"Ahmednagar",
-  "औरंगाबाद":"Aurangabad","आळेफाटा":"Pune","आर्वी":"Wardha",
-  "उमरखेड":"Yavatmal","उस्मानाबाद":"Osmanabad",
-  "कऱ्हाड":"Satara","कळवण":"Nashik","कळमनुरी":"Hingoli",
-  "कोपरगाव":"Ahmednagar","कोल्हापूर":"Kolhapur",
-  "खामगाव":"Buldhana","गडचिरोली":"Gadchiroli","गोंदिया":"Gondia",
-  "चंद्रपूर":"Chandrapur","चाळीसगाव":"Jalgaon","जळगाव":"Jalgaon",
-  "जालना":"Jalna","जुन्नर":"Pune","धुळे":"Dhule","नंदुरबार":"Nandurbar",
-  "नागपूर":"Nagpur","नांदेड":"Nanded","नाशिक":"Nashik","नेवासा":"Ahmednagar",
-  "परभणी":"Parbhani","पुणे":"Pune","पेण":"Raigad",
-  "बारामती":"Pune","बीड":"Beed","बुलढाणा":"Buldhana","भंडारा":"Bhandara",
-  "मालेगाव":"Nashik","मुंबई":"Mumbai","यवतमाळ":"Yavatmal",
-  "राहता":"Ahmednagar","राहुरी":"Ahmednagar","लातूर":"Latur",
-  "लासलगाव":"Nashik","वर्धा":"Wardha","वाशीम":"Washim","वाई":"Satara",
-  "संगमनेर":"Ahmednagar","सांगली":"Sangli","सातारा":"Satara",
-  "सिन्नर":"Nashik","सोलापूर":"Solapur","हिंगणघाट":"Wardha",
-  "हिंगोली":"Hingoli","श्रीरामपूर":"Ahmednagar","शेवगाव":"Ahmednagar",
+  // Ahmednagar
+  "अकोले":"Ahmednagar","अहमदनगर":"Ahmednagar","अहिल्यानगर":"Ahmednagar",
+  "आळेफाटा":"Pune","कर्जत (अहमहदनगर)":"Ahmednagar","कर्जत- (मिरजगाव)":"Ahmednagar",
+  "कोपरगाव":"Ahmednagar","नेवासा":"Ahmednagar","पारनेर":"Ahmednagar",
+  "पाथर्डी":"Ahmednagar","राहता":"Ahmednagar","राहुरी":"Ahmednagar",
+  "राहूरी":"Ahmednagar","राहूरी -वांबोरी":"Ahmednagar","संगमनेर":"Ahmednagar",
+  "श्रीगोंदा":"Ahmednagar","श्रीरामपूर":"Ahmednagar","शेवगाव":"Ahmednagar",
+  // Akola
+  "अकोला":"Akola","बाळापूर":"Akola","मुर्तीजापूर":"Akola","पातूर":"Akola",
+  // Amravati
+  "अचलपूर":"Amravati","अजनगाव सुर्जी":"Amravati","अमरावती":"Amravati","मोर्शी":"Amravati",
+  // Aurangabad
+  "औरंगाबाद":"Aurangabad","छत्रपती संभाजीनगर":"Aurangabad","कन्न्ड":"Aurangabad",
+  "गंगापूर":"Aurangabad","पैठण":"Aurangabad","सिल्लोड":"Aurangabad",
+  "सिल्लोड- भराडी":"Aurangabad","वैजापूर":"Aurangabad","वैजापूर- शिऊर":"Aurangabad",
+  "भोकरदन":"Aurangabad","भोकरदन -पिपळगाव रेणू":"Aurangabad",
+  // Beed
+  "बीड":"Beed","आंबेजोबाई":"Beed","केज":"Beed","गेवराई":"Beed",
+  "माजलगाव":"Beed","परळी-वैजनाथ":"Beed","किल्ले धारुर":"Beed",
+  "वडवणी":"Beed","आष्टी- कारंजा":"Beed",
+  // Bhandara
+  "भंडारा":"Bhandara","तुमसर":"Bhandara","पवनी":"Bhandara","लाखणी":"Bhandara",
+  // Buldhana
+  "बुलढाणा":"Buldhana","खामगाव":"Buldhana","चिखली":"Buldhana",
+  "देउळगाव राजा":"Buldhana","लोणार":"Buldhana","मलकापूर":"Buldhana",
+  "मेहकर":"Buldhana","शेगाव":"Buldhana",
+  // Chandrapur
+  "चंद्रपूर":"Chandrapur","भद्रावती":"Chandrapur","चिमुर":"Chandrapur",
+  "ब्रम्हपूरी":"Chandrapur","मुल":"Chandrapur","नागभिड":"Chandrapur",
+  "राजूरा":"Chandrapur","सावली":"Chandrapur","सिंदेवाही":"Chandrapur",
+  "वरोरा":"Chandrapur","वरोरा-खांबाडा":"Chandrapur","वरोरा-माढेली":"Chandrapur",
+  "वरोरा-शेगाव":"Chandrapur","चार्मोशी":"Chandrapur",
+  // Dhule
+  "धुळे":"Dhule","दोंडाईचा":"Dhule","दोंडाईचा - सिंदखेड":"Dhule","साक्री":"Dhule","शिरपूर":"Dhule",
+  // Gadchiroli
+  "गडचिरोली":"Gadchiroli","आरमेरी -देसाइगंज":"Gadchiroli","आरमोरी":"Gadchiroli","गोंडपिंपरी":"Gadchiroli",
+  // Gondia
+  "गोंदिया":"Gondia","तिरोडा":"Gondia",
+  // Hingoli
+  "हिंगोली":"Hingoli","कळमनुरी":"Hingoli","सेनगाव":"Hingoli","बसमत (कुरुंडा)":"Hingoli",
+  // Jalgaon
+  "जळगाव":"Jalgaon","अमळनेर":"Jalgaon","चाळीसगाव":"Jalgaon","चोपडा":"Jalgaon",
+  "पाचोरा":"Jalgaon","पाचोरा- भदगाव":"Jalgaon","पारोळा":"Jalgaon",
+  "भुसावळ":"Jalgaon","यावल":"Jalgaon","रावेर":"Jalgaon",
+  // Jalna
+  "जालना":"Jalna","बदनापूर":"Jalna","मंठा":"Jalna","परतूर":"Jalna","जाफराबाद":"Jalna",
+  // Kolhapur
+  "कोल्हापूर":"Kolhapur","गडहिंग्लज":"Kolhapur",
+  // Latur
+  "लातूर":"Latur","अहमहपूर":"Latur","औराद शहाजानी":"Latur","औसा":"Latur",
+  "चाकूर":"Latur","देवणी":"Latur","निलंगा":"Latur","उदगीर":"Latur",
+  // Mumbai / Thane / Palghar / Raigad
+  "मुंबई":"Mumbai","कल्याण":"Thane","भिवंडी":"Thane","मुरबाड":"Thane",
+  "उल्हासनगर":"Thane","पालघर (बेवूर)":"Palghar","वसई":"Palghar",
+  "अलिबाग":"Raigad","कर्जत (रायगड)":"Raigad","मुरुड":"Raigad",
+  "पनवेल":"Raigad","पेण":"Raigad","रोहा":"Raigad","मानगाव (भादव)":"Raigad",
+  // Nagpur
+  "नागपूर":"Nagpur","भिवापूर":"Nagpur","काटोल":"Nagpur","कामठी":"Nagpur",
+  "कळमेश्वर":"Nagpur","नरखेड":"Nagpur","पारशिवनी":"Nagpur","रामटेक":"Nagpur",
+  "सावनेर":"Nagpur","हिंगणा":"Nagpur","मांढळ":"Nagpur","उमरेड":"Nagpur",
+  // Nanded
+  "नांदेड":"Nanded","भोकर":"Nanded","हादगाव":"Nanded","हादगाव-तामसा":"Nanded",
+  "हिमायतनगर":"Nanded","लोहा":"Nanded","मुखेड":"Nanded","मुदखेड":"Nanded",
+  "धर्माबाद":"Nanded",
+  // Nandurbar
+  "नंदुरबार":"Nandurbar","नंदूरबार":"Nandurbar","अक्कलकुआ":"Nandurbar",
+  "नवापूर":"Nandurbar","शहादा":"Nandurbar","तळोदा":"Nandurbar","दुधणी":"Nandurbar",
+  // Nashik
+  "नाशिक":"Nashik","चांदवड":"Nashik","देवळा":"Nashik","दिंडोरी":"Nashik",
+  "दिंडोरी-वणी":"Nashik","घोटी":"Nashik","कळवण":"Nashik","मालेगाव":"Nashik",
+  "मनमाड":"Nashik","नांदगाव":"Nashik","नामपूर":"Nashik","नामपूर- करंजाड":"Nashik",
+  "सटाणा":"Nashik","सिन्नर":"Nashik","येवला":"Nashik","येवला -आंदरसूल":"Nashik",
+  "लासलगाव":"Nashik","लासूर स्टेशन":"Nashik","पिंपळगाव बसवंत":"Nashik",
+  "पिंपळगाव(ब) - औरंगपूर भेंडाळी":"Nashik","पिंपळगाव(ब) - पालखेड":"Nashik",
+  "पिंपळगाव(ब) - सायखेडा":"Nashik",
+  // Osmanabad / Dharashiv
+  "उस्मानाबाद":"Osmanabad","धाराशिव":"Osmanabad","कळंब (धाराशिव)":"Osmanabad",
+  "परांडा":"Osmanabad","तुळजापूर":"Osmanabad","उमराणे":"Osmanabad",
+  // Parbhani
+  "परभणी":"Parbhani","गंगाखेड":"Parbhani","जिंतूर":"Parbhani","मानवत":"Parbhani",
+  "पोम्भुर्नी":"Parbhani","सेलु":"Parbhani",
+  // Pune
+  "पुणे":"Pune","बारामती":"Pune","दौंड-केडगाव":"Pune","दौंड-पाटस":"Pune",
+  "दौंड-यवत":"Pune","इंदापूर":"Pune","जुन्नर":"Pune","खेड-चाकण":"Pune",
+  "मंचर":"Pune","मंचर- वणी":"Pune","शिरुर":"Pune","वडगाव पेठ":"Pune",
+  "भोर":"Pune","आळेफाटा":"Pune",
+  // Ratnagiri
+  "रत्नागिरी":"Ratnagiri",
+  // Sangli
+  "सांगली":"Sangli","आटपाडी":"Sangli","इस्लामपूर":"Sangli","तासगाव":"Sangli",
+  "पलूस":"Sangli","विटा":"Sangli",
+  // Satara
+  "सातारा":"Satara","कऱ्हाड":"Satara","पाटन":"Satara","वाई":"Satara",
+  "वडूज":"Satara","फलटण":"Satara","लोणंद":"Satara",
+  // Solapur
+  "सोलापूर":"Solapur","अकलुज":"Solapur","बार्शी":"Solapur",
+  "बार्शी -वैराग":"Solapur","करमाळा":"Solapur","कुर्डवाडी":"Solapur",
+  "कुर्डवाडी-मोडनिंब":"Solapur","मंगळवेढा":"Solapur","मोहोळ":"Solapur",
+  "पंढरपूर":"Solapur","सांगोला":"Solapur","ताडकळस":"Solapur",
+  // Wardha
+  "वर्धा":"Wardha","आर्वी":"Wardha","हिंगणघाट":"Wardha","पुलगाव":"Wardha",
+  "समुद्रपूर":"Wardha","सिंदी":"Wardha",
+  // Washim
+  "वाशीम":"Washim","कारंजा":"Washim","मंगरुळपीर":"Washim","मानोरा":"Washim","रिसोड":"Washim",
+  // Yavatmal
+  "यवतमाळ":"Yavatmal","दिग्रस":"Yavatmal","घाटंजी":"Yavatmal",
+  "मारेगाव":"Yavatmal","राळेगाव":"Yavatmal","उमरखेड":"Yavatmal",
+  "वणी":"Yavatmal","वरूड-राजूरा बझार":"Amravati",
 };
 
 function getDistrict(apmcCode, apmcNameMr) {
