@@ -309,7 +309,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     records:     allRecordsForJson,
   };
-  require("fs").writeFileSync("mandi_latest.json", JSON.stringify(jsonData));
+  require("fs").writeFileSync("mandi_latest.json", JSON.stringify(jsonData), { encoding: "utf8" });
   console.log(`\n📄 mandi_latest.json generated (${total} records)`);
 
   // Delete records older than 8 days
