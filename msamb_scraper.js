@@ -238,6 +238,7 @@ async function main() {
   console.log(`Found ${apmcList.length} APMCs\n`);
 
   let total = 0;
+  const allRecordsForJson = [];
 
   for (const apmc of apmcList) {
     await sleep(300);
@@ -281,6 +282,13 @@ async function main() {
         });
         await batch.commit();
       }
+      // Collect for JSON
+      allRecordsForJson.push(...records.map(r => ({
+        c: r.commodity, cMr: r.commodityMr, v: r.variety,
+        m: nameEn, mMr: `${nameMr} कृ.उ.बा.स.`, d: district,
+        mn: r.minPrice, mx: r.maxPrice, av: r.avgPrice,
+        ar: r.arrivalQtl, dt: r.date,
+      })));
       console.log(`✅ ${records.length} (${records[0]?.date})`);
     } catch (e) {
       console.log(`❌ ${e.message}`);
@@ -292,6 +300,33 @@ async function main() {
     totalRecords: total,
     source:       "msamb.com",
   });
+
+  // Generate JSON file for GitHub Pages (0 Firestore reads for users)
+  const today = new Date().toISOString().split("T")[0];
+  const jsonData = {
+    date:        today,
+    totalRecords: total,
+    generatedAt: new Date().toISOString(),
+    records:     allRecordsForJson,
+  };
+  require("fs").writeFileSync("mandi_latest.json", JSON.stringify(jsonData));
+  console.log(`\n📄 mandi_latest.json generated (${total} records)`);
+
+  // Delete records older than 8 days
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 8);
+  console.log(`\n🗑️  Deleting records older than ${cutoff.toDateString()}...`);
+  let deleted = 0;
+  while (true) {
+    const snap = await db.collection("mandi_rates")
+      .where("updatedAt", "<", admin.firestore.Timestamp.fromDate(cutoff))
+      .limit(400).get();
+    if (snap.empty) break;
+    const batch = db.batch();
+    snap.docs.forEach(d => { batch.delete(d.ref); deleted++; });
+    await batch.commit();
+  }
+  console.log(`   ✅ Deleted ${deleted} old records.`);
 
   // Clear district/market cache so app rebuilds it fresh
   await db.collection("mandi_meta").doc("districts").delete();

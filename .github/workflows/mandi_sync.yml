@@ -2,12 +2,14 @@ name: Mandi Rates Sync
 
 on:
   schedule:
-    - cron: '0 2 * * *'   # रोज रात्री 2 वाजता (IST 7:30 AM)
-  workflow_dispatch:        # we can Manual trigger पण करता येतो
+    - cron: '0 2 * * *'   # रोज IST 7:30 AM
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # JSON commit saathi
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,3 +29,11 @@ jobs:
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: node msamb_scraper.js
+
+      - name: Commit mandi_latest.json to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add mandi_latest.json
+          git diff --staged --quiet || git commit -m "chore: update mandi_latest.json [$(date +%Y-%m-%d)]"
+          git push
