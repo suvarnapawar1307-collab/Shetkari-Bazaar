@@ -1,89 +1,76 @@
 /**
- * Test script — API call करतो आणि result JSON मध्ये save करतो
- * Firebase connection नाही — फक्त API test
+ * Test Agmarknet direct scraping
  * Run: node test_api.js
  */
 
 const axios = require("axios");
-const fs = require("fs");
 
-const API_KEY = "579b464db66ec23bdd000001e68e388b437e41c567bff940d5603f35";
-const API_BASE = "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24";
+// Agmarknet state-wise daily price URL
+// State code for Maharashtra = 11
+// This returns JSON data directly
+async function testAgmarknet() {
+  console.log("Testing Agmarknet direct endpoints...\n");
 
-function getDateString(daysAgo) {
-  const d = new Date();
-  d.setDate(d.getDate() - daysAgo);
-  const dd = String(d.getDate()).padStart(2, "0");
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
-  return `${dd}-${mm}-${d.getFullYear()}`;
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2, "0");
+  const mm = String(today.getMonth() + 1).padStart(2, "0");
+  const yyyy = today.getFullYear();
+  const dateStr = `${dd}/${mm}/${yyyy}`;
+
+  // Try 1: Agmarknet JSON endpoint (used by some apps)
+  const urls = [
+    // State-wise price report
+    `https://agmarknet.gov.in/PriceAndArrivals/CommodityWiseReport.aspx?Tx_Commodity=0&Tx_State=MH&Tx_District=0&Tx_Market=0&DateFrom=${dateStr}&DateTo=${dateStr}&Fr_Date=${dateStr}&To_Date=${dateStr}&Tx_Trend=0&Tx_CommodityHead=ALL&Tx_StateHead=Maharashtra&Tx_DistrictHead=ALL&Tx_MarketHead=ALL`,
+    // Arrivals page
+    `https://agmarknet.gov.in/PriceAndArrivals/arrivals1.aspx`,
+  ];
+
+  for (const url of urls) {
+    try {
+      const r = await axios.get(url, {
+        timeout: 15000,
+        headers: { "User-Agent": "Mozilla/5.0" }
+      });
+      console.log(`URL: ${url.substring(0, 80)}...`);
+      console.log(`Status: ${r.status}, Size: ${r.data?.length || 0} bytes`);
+      // Check if it has price data
+      if (r.data?.includes?.("Maharashtra") || r.data?.includes?.("Pune")) {
+        console.log("✅ Contains Maharashtra data!");
+      }
+      console.log();
+    } catch (e) {
+      console.log(`❌ ${url.substring(0, 60)}: ${e.message}\n`);
+    }
+  }
+}
+
+// Also check if data.gov.in has today's data with State-only filter (no District)
+async function testDataGovIn() {
+  console.log("\nTesting data.gov.in State-only filter (no District)...");
+  const API_KEY = "579b464db66ec23bdd00000143c9863cd86e488f75586e772a1de8bd";
+  const BASE = "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24";
+
+  for (let d = 1; d <= 10; d++) {
+    const date = new Date();
+    date.setDate(date.getDate() - d);
+    const dd = String(date.getDate()).padStart(2, "0");
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const dateStr = `${dd}-${mm}-${date.getFullYear()}`;
+
+    try {
+      const url = `${BASE}?api-key=${API_KEY}&format=json&filters[State]=Maharashtra&filters[Arrival_Date]=${dateStr}&limit=1`;
+      const r = await axios.get(url, { timeout: 15000 });
+      const total = parseInt(r.data?.total ?? 0);
+      console.log(`  ${dateStr} → ${total > 0 ? `✅ ${total} records` : "0"}`);
+    } catch (e) {
+      console.log(`  ${dateStr} → ❌ ${e.message}`);
+    }
+  }
 }
 
 async function main() {
-  const allRecords = [];
-
-  // Last 3 days fetch
-  for (let daysAgo = 1; daysAgo <= 3; daysAgo++) {
-    const date = getDateString(daysAgo);
-    let offset = 0;
-    const limit = 500;
-    let dayCount = 0;
-    let apiTotal = 0;
-
-    console.log(`\n📅 Fetching ${date}...`);
-
-    do {
-      const url = `${API_BASE}?api-key=${API_KEY}&format=json` +
-        `&filters[State]=Maharashtra&filters[Arrival_Date]=${date}` +
-        `&limit=${limit}&offset=${offset}`;
-
-      const resp = await axios.get(url, { timeout: 20000 });
-      const records = resp.data?.records ?? [];
-      apiTotal = parseInt(resp.data?.total ?? 0);
-
-      if (records.length === 0) break;
-
-      allRecords.push(...records);
-      dayCount += records.length;
-      console.log(`  offset=${offset}: +${records.length} (${dayCount}/${apiTotal})`);
-      offset += limit;
-
-    } while (dayCount < apiTotal && offset < 2000); // max 2000 per day for test
-
-    console.log(`  ✅ ${date}: ${dayCount} records`);
-  }
-
-  // Save to JSON
-  const output = {
-    fetchedAt: new Date().toISOString(),
-    totalRecords: allRecords.length,
-    records: allRecords
-  };
-
-  fs.writeFileSync("mandi_data.json", JSON.stringify(output, null, 2));
-  console.log(`\n✅ Saved ${allRecords.length} records to mandi_data.json`);
-
-  // Summary by commodity
-  const byCommodity = {};
-  for (const r of allRecords) {
-    const c = r.Commodity || "Unknown";
-    byCommodity[c] = (byCommodity[c] || 0) + 1;
-  }
-  const sorted = Object.entries(byCommodity).sort((a, b) => b[1] - a[1]).slice(0, 20);
-  console.log("\n📊 Top 20 Commodities:");
-  sorted.forEach(([name, count]) => console.log(`  ${name}: ${count} markets`));
-
-  // Summary by district
-  const byDistrict = {};
-  for (const r of allRecords) {
-    const d = r.District || "Unknown";
-    byDistrict[d] = (byDistrict[d] || 0) + 1;
-  }
-  const distSorted = Object.entries(byDistrict).sort((a, b) => b[1] - a[1]).slice(0, 15);
-  console.log("\n🗺️ Top 15 Districts:");
-  distSorted.forEach(([name, count]) => console.log(`  ${name}: ${count} records`));
+  await testAgmarknet();
+  await testDataGovIn();
 }
 
-main().catch(e => {
-  console.error("❌ Error:", e.message);
-  process.exit(1);
-});
+main().catch(e => console.error("❌", e.message));

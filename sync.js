@@ -30,7 +30,7 @@ const MAHARASHTRA_DISTRICTS = [
 // ── Delete records older than 7 days ─────────────────────────
 async function deleteOldRecords() {
   const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 10);
+  cutoff.setDate(cutoff.getDate() - 30);
   console.log(`🗑️  Deleting records older than ${cutoff.toDateString()}...`);
   let deleted = 0;
 
@@ -88,25 +88,21 @@ async function main() {
     process.exit(1);
   }
 
-  console.log("🌾 Starting Mandi Rates sync (last 3 days)...");
+  console.log("🌾 Starting Mandi Rates sync (last 15 days)...");
   let totalSaved = 0;
 
-  // Fetch last 5 days — API has 2-3 day lag so this ensures full coverage
-  for (let daysAgo = 1; daysAgo <= 7; daysAgo++) {
+  for (let daysAgo = 1; daysAgo <= 15; daysAgo++) {
     const date = getDateString(daysAgo);
     console.log(`\n📅 Fetching ${date}...`);
     let dayTotal = 0;
+    let offset = 0;
+    const limit = 500;
 
-    for (const district of MAHARASHTRA_DISTRICTS) {
-      await sleep(300);
-      let offset = 0;
-      const limit = 500;
-      try {
-        while (true) {
+    try {
+      while (true) {
         const url =
           `${API_BASE}?api-key=${apiKey}&format=json` +
           `&filters[State]=Maharashtra` +
-          `&filters[District]=${encodeURIComponent(district)}` +
           `&filters[Arrival_Date]=${date}` +
           `&limit=${limit}&offset=${offset}`;
 
@@ -116,7 +112,6 @@ async function main() {
 
         if (records.length === 0) break;
 
-        // Firestore batch write (max 500)
         const batch = db.batch();
         for (const r of records) {
           const commodity  = r.Commodity || "";
@@ -144,19 +139,20 @@ async function main() {
           totalSaved++;
         }
         await batch.commit();
+        console.log(`  offset=${offset}: +${records.length} (${dayTotal}/${apiTotal})`);
 
         offset += limit;
         if (offset >= apiTotal) break;
-        }
-      } catch (e) {
-        console.log(`  ⚠️ ${district}: ${e.message} — skipping`);
+        await sleep(300); // avoid rate limit
       }
+    } catch (e) {
+      console.log(`  ⚠️ ${date}: ${e.message} — skipping`);
     }
 
     console.log(`  ✅ ${date}: ${dayTotal} records`);
   }
 
-  // Delete old records (older than 7 days)
+  // Delete old records (older than 30 days — keep more data)
   await deleteOldRecords();
 
   // Write sync metadata
