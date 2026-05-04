@@ -261,26 +261,11 @@ async function main() {
       if (records.length === 0) { console.log("0"); continue; }
 
       for (let i = 0; i < records.length; i += 400) {
-        const batch = db.batch();
-        records.slice(i, i + 400).forEach(r => {
-          const id = makeId(r.commodity, nameEn, r.date);
-          batch.set(db.collection("mandi_rates").doc(id), {
-            commodity:   r.commodity,
-            commodityMr: r.commodityMr,
-            variety:     r.variety,
-            market:      nameEn,
-            marketMr:    `${nameMr} कृ.उ.बा.स.`,
-            district:    district,
-            minPrice:    r.minPrice,
-            maxPrice:    r.maxPrice,
-            avgPrice:    r.avgPrice,
-            arrivalQtl:  r.arrivalQtl,
-            date:        r.date,
-            updatedAt:   admin.firestore.FieldValue.serverTimestamp(),
-          }, { merge: true });
-          total++;
-        });
-        await batch.commit();
+        // Firestore write disabled — using JSON only
+        // const batch = db.batch();
+        // records.slice(i, i + 400).forEach(r => { ... });
+        // await batch.commit();
+        total += records.slice(i, i + 400).length;
       }
       // Collect for JSON
       allRecordsForJson.push(...records.map(r => ({
@@ -295,11 +280,8 @@ async function main() {
     }
   }
 
-  await db.collection("mandi_meta").doc("last_sync").set({
-    syncedAt:     admin.firestore.FieldValue.serverTimestamp(),
-    totalRecords: total,
-    source:       "msamb.com",
-  });
+  // Firestore meta write disabled
+  // await db.collection("mandi_meta").doc("last_sync").set({ ... });
 
   // Generate JSON file for GitHub Pages (0 Firestore reads for users)
   const today = new Date().toISOString().split("T")[0];
@@ -312,25 +294,12 @@ async function main() {
   require("fs").writeFileSync("mandi_latest.json", JSON.stringify(jsonData), { encoding: "utf8" });
   console.log(`\n📄 mandi_latest.json generated (${total} records)`);
 
-  // Delete records older than 8 days
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 8);
-  console.log(`\n🗑️  Deleting records older than ${cutoff.toDateString()}...`);
-  let deleted = 0;
-  while (true) {
-    const snap = await db.collection("mandi_rates")
-      .where("updatedAt", "<", admin.firestore.Timestamp.fromDate(cutoff))
-      .limit(400).get();
-    if (snap.empty) break;
-    const batch = db.batch();
-    snap.docs.forEach(d => { batch.delete(d.ref); deleted++; });
-    await batch.commit();
-  }
-  console.log(`   ✅ Deleted ${deleted} old records.`);
+  // Delete old Firestore records — disabled (using JSON only)
+  // const cutoff = new Date(); ...
 
-  // Clear district/market cache so app rebuilds it fresh
-  await db.collection("mandi_meta").doc("districts").delete();
-  await db.collection("mandi_meta").doc("markets").delete();
+  // Clear district/market cache — disabled
+  // await db.collection("mandi_meta").doc("districts").delete();
+  // await db.collection("mandi_meta").doc("markets").delete();
 
   console.log(`\n✅ Done! Total: ${total} records`);
   process.exit(0);
