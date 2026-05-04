@@ -28,8 +28,6 @@ jobs:
         run: rm -f package-lock.json && npm install
 
       - name: Run Mandi Sync
-        env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: node msamb_scraper.js
 
       - name: Commit mandi_latest.json to repo
