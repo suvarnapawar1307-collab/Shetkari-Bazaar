@@ -211,10 +211,13 @@ function parseHtml(html) {
     if (cells.length >= 7) {
       const minPrice = parseFloat(cells[4]) || 0;
       if (minPrice > 0 && cells[0].length > 1) {
+        // cells[2] = unit (क्विंटल / नग / etc.)
+        const unit = cells[2] || 'क्विंटल';
         records.push({
           commodity:   mrToEn(cells[0]),
           commodityMr: cells[0],
           variety:     (cells[1] === "---" || cells[1] === "----") ? "" : cells[1],
+          unit:        unit,
           minPrice,
           maxPrice:    parseFloat(cells[5]) || 0,
           avgPrice:    parseFloat(cells[6]) || 0,
@@ -270,6 +273,7 @@ async function main() {
       // Collect for JSON
       allRecordsForJson.push(...records.map(r => ({
         c: r.commodity, cMr: r.commodityMr, v: r.variety,
+        u: r.unit,
         m: nameEn, mMr: `${nameMr} कृ.उ.बा.स.`, d: district,
         mn: r.minPrice, mx: r.maxPrice, av: r.avgPrice,
         ar: r.arrivalQtl, dt: r.date,
