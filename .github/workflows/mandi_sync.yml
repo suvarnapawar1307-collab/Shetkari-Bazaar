@@ -2,7 +2,9 @@ name: Mandi Rates Sync
 
 on:
   schedule:
-    - cron: '0 2 * * *'   # रोज IST 7:30 AM
+    - cron: '30 5 * * *'   # रोज IST 11:00 AM
+    - cron: '30 8 * * *'   # रोज IST 2:00 PM
+    - cron: '30 11 * * *'  # रोज IST 5:00 PM
   workflow_dispatch:
 
 jobs:
