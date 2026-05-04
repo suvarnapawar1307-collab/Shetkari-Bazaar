@@ -3,12 +3,7 @@
  * Run: node msamb_scraper.js
  */
 
-const admin = require("firebase-admin");
 const axios = require("axios");
-
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
-const db = admin.firestore();
 
 const BASE  = "https://msamb.com";
 const sleep = ms => new Promise(r => setTimeout(r, ms));
