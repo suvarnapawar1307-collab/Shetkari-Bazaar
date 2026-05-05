@@ -1,11 +1,8 @@
 {
-  "name": "shetkari-bazaar-functions",
+  "name": "shetkari-bazaar-mandi-scraper",
   "engines": { "node": ">=18" },
-  "main": "index.js",
+  "main": "msamb_scraper.js",
   "dependencies": {
-    "firebase-admin": "^11.11.1",
-    "firebase-functions": "^5.0.0",
-    "axios": "^1.6.0",
-    "cheerio": "^1.0.0"
+    "axios": "^1.6.0"
   }
 }
