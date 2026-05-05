@@ -25,7 +25,7 @@ jobs:
         run: node --version
 
       - name: Install dependencies
-        run: rm -f package-lock.json && npm install
+        run: npm install
 
       - name: Run Mandi Sync
         run: node msamb_scraper.js
