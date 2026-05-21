@@ -3,6 +3,7 @@
   "engines": { "node": ">=18" },
   "main": "msamb_scraper.js",
   "dependencies": {
-    "axios": "^1.6.0"
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
   }
 }
