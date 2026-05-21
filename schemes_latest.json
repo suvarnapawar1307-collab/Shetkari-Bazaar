@@ -1,219 +1,359 @@
 {
-  "lastUpdated": "2026-05-21T03:19:43.000Z",
-  "totalSchemes": 6,
+  "lastUpdated": "2026-05-21T03:55:20.862Z",
+  "totalSchemes": 10,
   "schemes": [
     {
-      "id": "pm-kisan-2024",
-      "titleEn": "PM-KISAN Scheme",
-      "titleMr": "पीएम-किसान योजना",
-      "titleHi": "पीएम-किसान योजना",
-      "descriptionEn": "Financial assistance of Rs. 6000 per year to all farmer families across the country in three equal installments of Rs. 2000 each.",
-      "descriptionMr": "देशभरातील सर्व शेतकरी कुटुंबांना दरवर्षी ₹6000 आर्थिक मदत, तीन समान हप्त्यांमध्ये प्रत्येकी ₹2000.",
-      "descriptionHi": "देश भर के सभी किसान परिवारों को प्रति वर्ष ₹6000 की वित्तीय सहायता, तीन समान किस्तों में प्रत्येक ₹2000.",
+      "id": "myscheme-pmkisan",
+      "titleEn": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+      "titleMr": "पीएम-किसान (प्रधानमंत्री किसान सम्मान निधी)",
+      "titleHi": "पीएम-किसान (प्रधानमंत्री किसान सम्मान निधि)",
+      "descriptionEn": "Income support of Rs. 6000 per year to all farmer families in three equal installments.",
+      "descriptionMr": "सर्व शेतकरी कुटुंबांना दरवर्षी ₹6000 उत्पन्न सहाय्य तीन समान हप्त्यांमध्ये.",
+      "descriptionHi": "सभी किसान परिवारों को प्रति वर्ष ₹6000 की आय सहायता तीन समान किस्तों में.",
       "imageUrl": null,
       "documentUrl": null,
       "websiteUrl": "https://pmkisan.gov.in",
       "category": "सबसिडी",
       "eligibility": [
-        "भारतीय नागरिक असणे आवश्यक",
-        "शेतजमीन मालकी असणे आवश्यक",
-        "आधार कार्ड बँक खात्याशी जोडलेले असावे"
+        "भारतीय नागरिक",
+        "शेतजमीन मालकी",
+        "आधार कार्ड बँक खात्याशी जोडलेले"
       ],
       "benefits": [
-        "दरवर्षी ₹6000 थेट बँक खात्यात",
-        "तीन हप्त्यांमध्ये ₹2000-₹2000-₹2000",
-        "कोणतीही व्याज किंवा परतफेड नाही"
+        "₹6000 प्रतिवर्ष",
+        "तीन हप्त्यांमध्ये ₹2000 प्रत्येक",
+        "थेट बँक हस्तांतरण"
       ],
       "documents": [
         "आधार कार्ड",
-        "बँक पासबुक (IFSC कोड सह)",
-        "जमीन दस्तऐवज (7/12 उतारा)",
+        "बँक पासबुक",
+        "7/12 उतारा",
         "मोबाइल नंबर"
       ],
-      "applicationProcess": "जवळच्या CSC सेंटर वर जा किंवा ऑनलाइन pmkisan.gov.in वर जाऊन Farmer Corner मध्ये New Farmer Registration वर क्लिक करा.",
+      "applicationProcess": "CSC सेंटर किंवा pmkisan.gov.in वर ऑनलाइन अर्ज करा",
       "deadline": null,
       "isActive": true,
-      "source": "pmkisan.gov.in",
-      "createdAt": "2026-05-21T03:19:43.000Z",
-      "updatedAt": "2026-05-21T03:19:43.000Z"
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-21T03:55:20.860Z",
+      "updatedAt": "2026-05-21T03:55:20.860Z"
     },
     {
-      "id": "kcc-2024",
-      "titleEn": "Kisan Credit Card (KCC)",
-      "titleMr": "किसान क्रेडिट कार्ड (KCC)",
-      "titleHi": "किसान क्रेडिट कार्ड (KCC)",
-      "descriptionEn": "Short-term credit facility for farmers to meet their agricultural needs. Loan up to Rs. 3 lakh at 4% interest rate.",
-      "descriptionMr": "शेतकऱ्यांच्या शेती गरजा पूर्ण करण्यासाठी अल्पकालीन कर्ज सुविधा. ₹3 लाख पर्यंत कर्ज 4% व्याजदराने.",
-      "descriptionHi": "किसानों की कृषि आवश्यकताओं को पूरा करने के लिए अल्पकालिक ऋण सुविधा। 4% ब्याज दर पर ₹3 लाख तक का ऋण।",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://www.nabard.org/kcc.aspx",
-      "category": "कर्ज",
-      "eligibility": [
-        "शेतकरी - मालक किंवा भाडेकरू",
-        "शेअर क्रॉपर्स, भाडेकरू शेतकरी",
-        "चांगला क्रेडिट इतिहास"
-      ],
-      "benefits": [
-        "₹3 लाख पर्यंत कर्ज",
-        "फक्त 4% व्याजदर (2% सबसिडी)",
-        "वेळेवर परतफेड केल्यास 3% अतिरिक्त सवलत",
-        "5 वर्षांसाठी वैध"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "पॅन कार्ड",
-        "जमीन दस्तऐवज (7/12, 8A)",
-        "बँक स्टेटमेंट (6 महिने)"
-      ],
-      "applicationProcess": "जवळच्या बँकेत जा. KCC अर्ज फॉर्म भरा आणि आवश्यक कागदपत्रे सोबत जमा करा.",
-      "deadline": null,
-      "isActive": true,
-      "source": "nabard.org",
-      "createdAt": "2026-05-21T03:19:43.000Z",
-      "updatedAt": "2026-05-21T03:19:43.000Z"
-    },
-    {
-      "id": "pmfby-2024",
+      "id": "myscheme-pmfby",
       "titleEn": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
-      "titleMr": "प्रधानमंत्री फसल विमा योजना",
-      "titleHi": "प्रधानमंत्री फसल बीमा योजना",
-      "descriptionEn": "Crop insurance scheme providing financial support to farmers in case of crop loss due to natural calamities.",
-      "descriptionMr": "नैसर्गिक आपत्ती, कीटक आणि रोगांमुळे पीक नुकसान झाल्यास शेतकऱ्यांना आर्थिक सहाय्य देणारी पीक विमा योजना.",
-      "descriptionHi": "प्राकृतिक आपदाओं के कारण फसल नुकसान की स्थिति में किसानों को वित्तीय सहायता प्रदान करने वाली फसल बीमा योजना।",
+      "titleMr": "प्रधानमंत्री फसल विमा योजना (PMFBY)",
+      "titleHi": "प्रधानमंत्री फसल बीमा योजना (PMFBY)",
+      "descriptionEn": "Comprehensive crop insurance covering pre-sowing to post-harvest losses.",
+      "descriptionMr": "पेरणीपूर्व ते कापणीनंतरच्या नुकसानीचा सर्वसमावेशक पीक विमा.",
+      "descriptionHi": "बुवाई से पहले से लेकर कटाई के बाद के नुकसान को कवर करने वाला व्यापक फसल बीमा.",
       "imageUrl": null,
       "documentUrl": null,
       "websiteUrl": "https://pmfby.gov.in",
       "category": "विमा",
       "eligibility": [
-        "सर्व शेतकरी - मालक आणि भाडेकरू",
-        "खरीप, रब्बी आणि बागायती पिकांसाठी",
-        "अधिसूचित क्षेत्रातील शेतकरी"
+        "सर्व शेतकरी",
+        "खरीप/रब्बी/बागायती पिके",
+        "अधिसूचित क्षेत्र"
       ],
       "benefits": [
-        "नैसर्गिक आपत्ती संरक्षण",
-        "खरीप पिकांसाठी फक्त 2% प्रीमियम",
-        "रब्बी पिकांसाठी 1.5% प्रीमियम",
+        "खरीप 2% प्रीमियम",
+        "रब्बी 1.5% प्रीमियम",
+        "बागायती 5% प्रीमियम",
         "जलद दावा निपटारा"
       ],
       "documents": [
         "आधार कार्ड",
-        "जमीन दस्तऐवज (7/12)",
+        "7/12 उतारा",
         "पेरणी पुरावा",
         "बँक खाते तपशील"
       ],
-      "applicationProcess": "जवळच्या बँक, CSC सेंटर किंवा ऑनलाइन pmfby.gov.in वर जाऊन अर्ज करा.",
-      "deadline": "2026-08-19T03:19:43.000Z",
-      "isActive": true,
-      "source": "pmfby.gov.in",
-      "createdAt": "2026-05-21T03:19:43.000Z",
-      "updatedAt": "2026-05-21T03:19:43.000Z"
-    },
-    {
-      "id": "soil-health-card-2024",
-      "titleEn": "Soil Health Card Scheme",
-      "titleMr": "माती आरोग्य कार्ड योजना",
-      "titleHi": "मृदा स्वास्थ्य कार्ड योजना",
-      "descriptionEn": "Free soil testing and health card to help farmers improve soil fertility and crop productivity.",
-      "descriptionMr": "माती चाचणी आणि आरोग्य कार्ड मोफत देऊन शेतकऱ्यांना माती सुपीकता आणि पीक उत्पादकता वाढविण्यास मदत.",
-      "descriptionHi": "मुफ्त मिट्टी परीक्षण और स्वास्थ्य कार्ड से किसानों को मिट्टी की उर्वरता बढ़ाने में मदद।",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://soilhealth.dac.gov.in",
-      "category": "प्रशिक्षण",
-      "eligibility": [
-        "सर्व शेतकरी",
-        "कोणतेही जमीन क्षेत्रफळ निर्बंध नाही",
-        "प्रत्येक 3 वर्षांनी नवीन कार्ड"
-      ],
-      "benefits": [
-        "मोफत माती चाचणी",
-        "12 पॅरामीटर्स चाचणी",
-        "खत शिफारसी",
-        "ऑनलाइन कार्ड डाउनलोड"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "जमीन दस्तऐवज (7/12)",
-        "मोबाइल नंबर"
-      ],
-      "applicationProcess": "जवळच्या कृषी विभाग कार्यालय किंवा माती चाचणी प्रयोगशाळेत जा. माती नमुना द्या.",
+      "applicationProcess": "बँक, CSC किंवा pmfby.gov.in वर पेरणीच्या 7 दिवसांत अर्ज करा",
       "deadline": null,
       "isActive": true,
-      "source": "soilhealth.dac.gov.in",
-      "createdAt": "2026-05-21T03:19:43.000Z",
-      "updatedAt": "2026-05-21T03:19:43.000Z"
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-21T03:55:20.860Z",
+      "updatedAt": "2026-05-21T03:55:20.860Z"
     },
     {
-      "id": "pkvy-2024",
-      "titleEn": "Paramparagat Krishi Vikas Yojana (PKVY)",
-      "titleMr": "परंपरागत कृषी विकास योजना",
-      "titleHi": "परंपरागत कृषि विकास योजना",
-      "descriptionEn": "Organic farming promotion scheme providing Rs. 50,000 per hectare financial assistance for 3 years.",
-      "descriptionMr": "सेंद्रिय शेती प्रोत्साहन योजना - 3 वर्षांसाठी प्रति हेक्टर ₹50,000 आर्थिक मदत.",
-      "descriptionHi": "जैविक खेती प्रोत्साहन योजना - 3 वर्षों के लिए प्रति हेक्टेयर ₹50,000 की वित्तीय सहायता।",
+      "id": "myscheme-kcc",
+      "titleEn": "Kisan Credit Card (KCC)",
+      "titleMr": "किसान क्रेडिट कार्ड (KCC)",
+      "titleHi": "किसान क्रेडिट कार्ड (KCC)",
+      "descriptionEn": "Credit facility for farmers to meet agricultural expenses at concessional interest rates.",
+      "descriptionMr": "सवलतीच्या व्याजदराने शेती खर्च भागविण्यासाठी शेतकऱ्यांसाठी कर्ज सुविधा.",
+      "descriptionHi": "रियायती ब्याज दरों पर कृषि खर्चों को पूरा करने के लिए किसानों के लिए ऋण सुविधा.",
       "imageUrl": null,
       "documentUrl": null,
-      "websiteUrl": "https://pgsindia-ncof.gov.in",
-      "category": "सबसिडी",
+      "websiteUrl": "https://www.nabard.org/kcc.aspx",
+      "category": "कर्ज",
       "eligibility": [
-        "शेतकरी गट (किमान 50 शेतकरी)",
-        "किमान 50 हेक्टर क्षेत्र",
-        "सेंद्रिय शेती करण्यास इच्छुक"
+        "शेतकरी - मालक/भाडेकरू",
+        "शेअर क्रॉपर्स",
+        "SHG/JLG सदस्य"
       ],
       "benefits": [
-        "₹50,000 प्रति हेक्टर (3 वर्षे)",
-        "सेंद्रिय खत, बियाणे सबसिडी",
-        "प्रशिक्षण आणि तांत्रिक मार्गदर्शन",
-        "PGS प्रमाणीकरण मोफत"
+        "₹3 लाख पर्यंत कर्ज",
+        "4% व्याजदर",
+        "वेळेवर परतफेड 3% सवलत",
+        "5 वर्षे वैधता"
       ],
       "documents": [
         "आधार कार्ड",
-        "जमीन दस्तऐवज (7/12)",
-        "गट नोंदणी प्रमाणपत्र",
-        "बँक खाते तपशील"
+        "पॅन कार्ड",
+        "7/12, 8A",
+        "बँक स्टेटमेंट",
+        "फोटो"
       ],
-      "applicationProcess": "50 शेतकऱ्यांचा गट तयार करा. जवळच्या कृषी विभाग कार्यालयात अर्ज करा.",
-      "deadline": "2026-09-18T03:19:43.000Z",
+      "applicationProcess": "जवळच्या बँकेत KCC अर्ज फॉर्म भरा आणि कागदपत्रे जमा करा",
+      "deadline": null,
       "isActive": true,
-      "source": "pgsindia-ncof.gov.in",
-      "createdAt": "2026-05-21T03:19:43.000Z",
-      "updatedAt": "2026-05-21T03:19:43.000Z"
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-21T03:55:20.860Z",
+      "updatedAt": "2026-05-21T03:55:20.860Z"
     },
     {
-      "id": "mh-karjmukti-2024",
+      "id": "mahadbt-karjmukti",
       "titleEn": "Mahatma Jyotiba Phule Shetkari Karjmukti Yojana",
       "titleMr": "महात्मा ज्योतिबा फुले शेतकरी कर्जमुक्ती योजना",
       "titleHi": "महात्मा ज्योतिबा फुले किसान ऋण माफी योजना",
-      "descriptionEn": "Maharashtra government farm loan waiver scheme for small and marginal farmers with outstanding loans up to Rs. 2 lakh.",
-      "descriptionMr": "महाराष्ट्र शासनाची लहान आणि सीमांत शेतकऱ्यांसाठी ₹2 लाख पर्यंत थकबाकी कर्ज माफी योजना.",
-      "descriptionHi": "महाराष्ट्र सरकार की छोटे और सीमांत किसानों के लिए ₹2 लाख तक के बकाया ऋण माफी योजना।",
+      "descriptionEn": "Farm loan waiver for small and marginal farmers with loans up to Rs. 2 lakh.",
+      "descriptionMr": "लहान आणि सीमांत शेतकऱ्यांसाठी ₹2 लाख पर्यंत कर्ज माफी योजना.",
+      "descriptionHi": "छोटे और सीमांत किसानों के लिए ₹2 लाख तक के ऋण माफी योजना.",
       "imageUrl": null,
       "documentUrl": null,
       "websiteUrl": "https://krishi.maharashtra.gov.in",
       "category": "कर्ज",
       "eligibility": [
         "महाराष्ट्रातील शेतकरी",
-        "लहान आणि सीमांत शेतकरी (5 हेक्टर पर्यंत)",
+        "5 हेक्टर पर्यंत जमीन",
         "₹2 लाख पर्यंत कर्ज"
       ],
       "benefits": [
         "₹2 लाख पर्यंत कर्ज माफी",
         "व्याज माफी",
-        "थेट बँकेत रक्कम जमा"
+        "थेट बँक हस्तांतरण"
       ],
       "documents": [
         "आधार कार्ड",
-        "जमीन दस्तऐवज (7/12, 8A)",
+        "7/12, 8A",
         "कर्ज पुस्तिका",
         "बँक स्टेटमेंट"
       ],
-      "applicationProcess": "जवळच्या तलाठी कार्यालय किंवा ग्रामसेवक कार्यालयात जा. अर्ज फॉर्म भरा.",
-      "deadline": "2026-08-19T03:19:43.000Z",
+      "applicationProcess": "तलाठी/ग्रामसेवक कार्यालयात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "mahadbt.maharashtra.gov.in",
+      "createdAt": "2026-05-21T03:55:20.860Z",
+      "updatedAt": "2026-05-21T03:55:20.860Z"
+    },
+    {
+      "id": "mahadbt-tractor",
+      "titleEn": "Tractor Subsidy Scheme",
+      "titleMr": "ट्रॅक्टर अनुदान योजना",
+      "titleHi": "ट्रैक्टर सब्सिडी योजना",
+      "descriptionEn": "Subsidy on purchase of tractors for small and marginal farmers.",
+      "descriptionMr": "लहान आणि सीमांत शेतकऱ्यांसाठी ट्रॅक्टर खरेदीवर अनुदान.",
+      "descriptionHi": "छोटे और सीमांत किसानों के लिए ट्रैक्टर खरीद पर सब्सिडी.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://mahadbt.maharashtra.gov.in",
+      "category": "सबसिडी",
+      "eligibility": [
+        "महाराष्ट्रातील शेतकरी",
+        "लहान/सीमांत शेतकरी",
+        "प्रथमच ट्रॅक्टर खरेदी"
+      ],
+      "benefits": [
+        "40% अनुदान (SC/ST)",
+        "25% अनुदान (इतर)",
+        "कमाल ₹90,000"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12",
+        "जात प्रमाणपत्र",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "mahadbt.maharashtra.gov.in",
+      "createdAt": "2026-05-21T03:55:20.860Z",
+      "updatedAt": "2026-05-21T03:55:20.860Z"
+    },
+    {
+      "id": "mahadbt-drip",
+      "titleEn": "Drip Irrigation Subsidy",
+      "titleMr": "ठिबक सिंचन अनुदान योजना",
+      "titleHi": "ड्रिप सिंचाई सब्सिडी योजना",
+      "descriptionEn": "Subsidy for installation of drip irrigation systems to conserve water.",
+      "descriptionMr": "पाणी बचतीसाठी ठिबक सिंचन प्रणाली बसविण्यासाठी अनुदान.",
+      "descriptionHi": "पानी बचाने के लिए ड्रिप सिंचाई प्रणाली स्थापित करने के लिए सब्सिडी.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://mahadbt.maharashtra.gov.in",
+      "category": "सबसिडी",
+      "eligibility": [
+        "महाराष्ट्रातील शेतकरी",
+        "किमान 1 हेक्टर जमीन",
+        "पाणी स्रोत उपलब्ध"
+      ],
+      "benefits": [
+        "लहान शेतकरी 55% अनुदान",
+        "इतर शेतकरी 45% अनुदान",
+        "SC/ST 60% अनुदान"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12",
+        "पाणी स्रोत पुरावा",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "mahadbt.maharashtra.gov.in",
+      "createdAt": "2026-05-21T03:55:20.860Z",
+      "updatedAt": "2026-05-21T03:55:20.860Z"
+    },
+    {
+      "id": "krishi-mh-soil",
+      "titleEn": "Soil Health Card Scheme",
+      "titleMr": "माती आरोग्य कार्ड योजना",
+      "titleHi": "मृदा स्वास्थ्य कार्ड योजना",
+      "descriptionEn": "Free soil testing and health card for improving soil fertility.",
+      "descriptionMr": "माती सुपीकता सुधारण्यासाठी मोफत माती चाचणी आणि आरोग्य कार्ड.",
+      "descriptionHi": "मिट्टी की उर्वरता सुधारने के लिए मुफ्त मिट्टी परीक्षण और स्वास्थ्य कार्ड.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://krishi.maharashtra.gov.in",
+      "category": "प्रशिक्षण",
+      "eligibility": [
+        "सर्व शेतकरी",
+        "कोणतेही क्षेत्रफळ निर्बंध नाही"
+      ],
+      "benefits": [
+        "मोफत माती चाचणी",
+        "12 पॅरामीटर्स",
+        "खत शिफारसी",
+        "ऑनलाइन कार्ड"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12",
+        "मोबाइल नंबर"
+      ],
+      "applicationProcess": "कृषी विभाग कार्यालय/KVK/माती प्रयोगशाळेत माती नमुना द्या",
+      "deadline": null,
       "isActive": true,
       "source": "krishi.maharashtra.gov.in",
-      "createdAt": "2026-05-21T03:19:43.000Z",
-      "updatedAt": "2026-05-21T03:19:43.000Z"
+      "createdAt": "2026-05-21T03:55:20.861Z",
+      "updatedAt": "2026-05-21T03:55:20.861Z"
+    },
+    {
+      "id": "krishi-mh-organic",
+      "titleEn": "Paramparagat Krishi Vikas Yojana (PKVY)",
+      "titleMr": "परंपरागत कृषी विकास योजना (PKVY)",
+      "titleHi": "परंपरागत कृषि विकास योजना (PKVY)",
+      "descriptionEn": "Organic farming promotion with Rs. 50,000 per hectare for 3 years.",
+      "descriptionMr": "सेंद्रिय शेती प्रोत्साहन - 3 वर्षांसाठी प्रति हेक्टर ₹50,000.",
+      "descriptionHi": "जैविक खेती प्रोत्साहन - 3 वर्षों के लिए प्रति हेक्टेयर ₹50,000.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://pgsindia-ncof.gov.in",
+      "category": "सबसिडी",
+      "eligibility": [
+        "शेतकरी गट (50+)",
+        "किमान 50 हेक्टर",
+        "PGS प्रमाणीकरण"
+      ],
+      "benefits": [
+        "₹50,000/हेक्टर (3 वर्षे)",
+        "सेंद्रिय खत सबसिडी",
+        "प्रशिक्षण",
+        "प्रमाणीकरण मोफत"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12",
+        "गट नोंदणी",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "50 शेतकऱ्यांचा गट तयार करा आणि कृषी विभागात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "krishi.maharashtra.gov.in",
+      "createdAt": "2026-05-21T03:55:20.861Z",
+      "updatedAt": "2026-05-21T03:55:20.861Z"
+    },
+    {
+      "id": "indiagov-pmkmy",
+      "titleEn": "Pradhan Mantri Kisan Maan Dhan Yojana (PM-KMY)",
+      "titleMr": "प्रधानमंत्री किसान मानधन योजना (PM-KMY)",
+      "titleHi": "प्रधानमंत्री किसान मान-धन योजना (PM-KMY)",
+      "descriptionEn": "Pension scheme for small and marginal farmers providing Rs. 3000 monthly pension after 60 years.",
+      "descriptionMr": "लहान आणि सीमांत शेतकऱ्यांसाठी 60 वर्षांनंतर मासिक ₹3000 पेन्शन योजना.",
+      "descriptionHi": "छोटे और सीमांत किसानों के लिए 60 वर्ष के बाद मासिक ₹3000 पेंशन योजना.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://maandhan.in",
+      "category": "इतर",
+      "eligibility": [
+        "18-40 वर्षे वय",
+        "2 हेक्टर पर्यंत जमीन",
+        "लहान/सीमांत शेतकरी"
+      ],
+      "benefits": [
+        "60 वर्षांनंतर ₹3000/महिना पेन्शन",
+        "कमी योगदान (₹55-₹200/महिना)",
+        "आजीवन पेन्शन"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "बँक पासबुक",
+        "7/12",
+        "वय पुरावा"
+      ],
+      "applicationProcess": "CSC सेंटर वर जाऊन नोंदणी करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "india.gov.in",
+      "createdAt": "2026-05-21T03:55:20.861Z",
+      "updatedAt": "2026-05-21T03:55:20.861Z"
+    },
+    {
+      "id": "indiagov-pmay",
+      "titleEn": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
+      "titleMr": "प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)",
+      "titleHi": "प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)",
+      "descriptionEn": "Housing scheme for rural poor providing financial assistance for pucca house construction.",
+      "descriptionMr": "ग्रामीण गरीबांसाठी पक्के घर बांधणीसाठी आर्थिक सहाय्य योजना.",
+      "descriptionHi": "ग्रामीण गरीबों के लिए पक्के घर निर्माण के लिए वित्तीय सहायता योजना.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://pmayg.nic.in",
+      "category": "इतर",
+      "eligibility": [
+        "ग्रामीण भागातील गरीब",
+        "कच्चे घरात राहणारे",
+        "SECC 2011 यादीत नाव"
+      ],
+      "benefits": [
+        "मैदानी भागात ₹1.20 लाख",
+        "डोंगराळ भागात ₹1.30 लाख",
+        "90 दिवसांचे MGNREGA रोजगार"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "जॉब कार्ड",
+        "बँक खाते तपशील",
+        "जमीन दस्तऐवज"
+      ],
+      "applicationProcess": "ग्रामपंचायत/ग्रामसेवक कार्यालयात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "india.gov.in",
+      "createdAt": "2026-05-21T03:55:20.861Z",
+      "updatedAt": "2026-05-21T03:55:20.861Z"
     }
   ]
 }
