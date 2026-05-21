@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-21T03:55:20.862Z",
-  "totalSchemes": 10,
+  "lastUpdated": "2026-05-21T16:54:03.745Z",
+  "totalSchemes": 14,
   "schemes": [
     {
       "id": "myscheme-pmkisan",
@@ -34,8 +34,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T03:55:20.860Z",
-      "updatedAt": "2026-05-21T03:55:20.860Z"
+      "createdAt": "2026-05-21T16:54:03.740Z",
+      "updatedAt": "2026-05-21T16:54:03.741Z"
     },
     {
       "id": "myscheme-pmfby",
@@ -70,8 +70,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T03:55:20.860Z",
-      "updatedAt": "2026-05-21T03:55:20.860Z"
+      "createdAt": "2026-05-21T16:54:03.741Z",
+      "updatedAt": "2026-05-21T16:54:03.741Z"
     },
     {
       "id": "myscheme-kcc",
@@ -107,8 +107,149 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T03:55:20.860Z",
-      "updatedAt": "2026-05-21T03:55:20.860Z"
+      "createdAt": "2026-05-21T16:54:03.741Z",
+      "updatedAt": "2026-05-21T16:54:03.741Z"
+    },
+    {
+      "id": "myscheme-pmkmy",
+      "titleEn": "Pradhan Mantri Kisan Maan Dhan Yojana (PM-KMY)",
+      "titleMr": "प्रधानमंत्री किसान मानधन योजना (PM-KMY)",
+      "titleHi": "प्रधानमंत्री किसान मान-धन योजना (PM-KMY)",
+      "descriptionEn": "Pension scheme for small and marginal farmers providing Rs. 3000 monthly pension after 60 years.",
+      "descriptionMr": "लहान आणि सीमांत शेतकऱ्यांसाठी 60 वर्षांनंतर मासिक ₹3000 पेन्शन योजना.",
+      "descriptionHi": "छोटे और सीमांत किसानों के लिए 60 वर्ष के बाद मासिक ₹3000 पेंशन योजना.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://maandhan.in",
+      "category": "इतर",
+      "eligibility": [
+        "18-40 वर्षे वय",
+        "2 हेक्टर पर्यंत जमीन",
+        "लहान/सीमांत शेतकरी"
+      ],
+      "benefits": [
+        "60 वर्षांनंतर ₹3000/महिना पेन्शन",
+        "कमी योगदान (₹55-₹200/महिना)",
+        "आजीवन पेन्शन"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "बँक पासबुक",
+        "7/12",
+        "वय पुरावा"
+      ],
+      "applicationProcess": "CSC सेंटर वर जाऊन नोंदणी करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-21T16:54:03.741Z",
+      "updatedAt": "2026-05-21T16:54:03.741Z"
+    },
+    {
+      "id": "myscheme-nfsm",
+      "titleEn": "National Food Security Mission (NFSM)",
+      "titleMr": "राष्ट्रीय अन्न सुरक्षा मिशन (NFSM)",
+      "titleHi": "राष्ट्रीय खाद्य सुरक्षा मिशन (NFSM)",
+      "descriptionEn": "Increase production of rice, wheat, pulses and coarse cereals through area expansion and productivity enhancement.",
+      "descriptionMr": "तांदूळ, गहू, डाळी आणि मोटे धान्य उत्पादन वाढविण्यासाठी क्षेत्र विस्तार आणि उत्पादकता वाढ.",
+      "descriptionHi": "चावल, गेहूं, दालें और मोटे अनाज का उत्पादन बढ़ाने के लिए क्षेत्र विस्तार और उत्पादकता वृद्धि.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://nfsm.gov.in",
+      "category": "सबसिडी",
+      "eligibility": [
+        "सर्व शेतकरी",
+        "धान्य पीक घेणारे",
+        "डाळी पीक घेणारे"
+      ],
+      "benefits": [
+        "बियाणे सबसिडी",
+        "खत सबसिडी",
+        "यंत्रसामग्री सबसिडी",
+        "तांत्रिक मार्गदर्शन"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12 उतारा",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "जवळच्या कृषी विभाग कार्यालयात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-21T16:54:03.741Z",
+      "updatedAt": "2026-05-21T16:54:03.741Z"
+    },
+    {
+      "id": "myscheme-rkvy",
+      "titleEn": "Rashtriya Krishi Vikas Yojana (RKVY)",
+      "titleMr": "राष्ट्रीय कृषी विकास योजना (RKVY)",
+      "titleHi": "राष्ट्रीय कृषि विकास योजना (RKVY)",
+      "descriptionEn": "State Plan Scheme for ensuring holistic development of agriculture and allied sectors.",
+      "descriptionMr": "कृषी आणि संबंधित क्षेत्रांच्या सर्वांगीण विकासासाठी राज्य योजना.",
+      "descriptionHi": "कृषि और संबद्ध क्षेत्रों के समग्र विकास को सुनिश्चित करने के लिए राज्य योजना।",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://rkvy.nic.in",
+      "category": "सबसिडी",
+      "eligibility": [
+        "शेतकरी",
+        "कृषी उद्योजक",
+        "शेतकरी गट"
+      ],
+      "benefits": [
+        "कृषी यंत्रसामग्री सबसिडी",
+        "सिंचन सुविधा",
+        "कृषी पायाभूत सुविधा",
+        "प्रशिक्षण"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12",
+        "प्रकल्प अहवाल",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "जिल्हा कृषी कार्यालयात प्रकल्प सादर करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-21T16:54:03.741Z",
+      "updatedAt": "2026-05-21T16:54:03.741Z"
+    },
+    {
+      "id": "myscheme-pmay",
+      "titleEn": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
+      "titleMr": "प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)",
+      "titleHi": "प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)",
+      "descriptionEn": "Housing scheme for rural poor providing financial assistance for pucca house construction.",
+      "descriptionMr": "ग्रामीण गरीबांसाठी पक्के घर बांधणीसाठी आर्थिक सहाय्य योजना.",
+      "descriptionHi": "ग्रामीण गरीबों के लिए पक्के घर निर्माण के लिए वित्तीय सहायता योजना.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://pmayg.nic.in",
+      "category": "इतर",
+      "eligibility": [
+        "ग्रामीण भागातील गरीब",
+        "कच्चे घरात राहणारे",
+        "SECC 2011 यादीत नाव"
+      ],
+      "benefits": [
+        "मैदानी भागात ₹1.20 लाख",
+        "डोंगराळ भागात ₹1.30 लाख",
+        "90 दिवसांचे MGNREGA रोजगार"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "जॉब कार्ड",
+        "बँक खाते तपशील",
+        "जमीन दस्तऐवज"
+      ],
+      "applicationProcess": "ग्रामपंचायत/ग्रामसेवक कार्यालयात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-21T16:54:03.741Z",
+      "updatedAt": "2026-05-21T16:54:03.741Z"
     },
     {
       "id": "mahadbt-karjmukti",
@@ -142,8 +283,8 @@
       "deadline": null,
       "isActive": true,
       "source": "mahadbt.maharashtra.gov.in",
-      "createdAt": "2026-05-21T03:55:20.860Z",
-      "updatedAt": "2026-05-21T03:55:20.860Z"
+      "createdAt": "2026-05-21T16:54:03.742Z",
+      "updatedAt": "2026-05-21T16:54:03.742Z"
     },
     {
       "id": "mahadbt-tractor",
@@ -177,8 +318,8 @@
       "deadline": null,
       "isActive": true,
       "source": "mahadbt.maharashtra.gov.in",
-      "createdAt": "2026-05-21T03:55:20.860Z",
-      "updatedAt": "2026-05-21T03:55:20.860Z"
+      "createdAt": "2026-05-21T16:54:03.742Z",
+      "updatedAt": "2026-05-21T16:54:03.742Z"
     },
     {
       "id": "mahadbt-drip",
@@ -212,8 +353,81 @@
       "deadline": null,
       "isActive": true,
       "source": "mahadbt.maharashtra.gov.in",
-      "createdAt": "2026-05-21T03:55:20.860Z",
-      "updatedAt": "2026-05-21T03:55:20.860Z"
+      "createdAt": "2026-05-21T16:54:03.742Z",
+      "updatedAt": "2026-05-21T16:54:03.742Z"
+    },
+    {
+      "id": "mahadbt-solar",
+      "titleEn": "Solar Pump Subsidy Scheme",
+      "titleMr": "सौर पंप अनुदान योजना",
+      "titleHi": "सोलर पंप सब्सिडी योजना",
+      "descriptionEn": "Subsidy for installation of solar-powered agricultural pumps to reduce electricity costs.",
+      "descriptionMr": "वीज खर्च कमी करण्यासाठी सौर ऊर्जेवर चालणारे शेती पंप बसविण्यासाठी अनुदान.",
+      "descriptionHi": "बिजली की लागत कम करने के लिए सौर ऊर्जा से चलने वाले कृषि पंप स्थापित करने के लिए सब्सिडी.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://mahadbt.maharashtra.gov.in",
+      "category": "सबसिडी",
+      "eligibility": [
+        "महाराष्ट्रातील शेतकरी",
+        "शेतीसाठी वीज कनेक्शन",
+        "किमान 1 हेक्टर जमीन"
+      ],
+      "benefits": [
+        "3 HP पंप 90% अनुदान",
+        "5 HP पंप 90% अनुदान",
+        "वीज बिल शून्य",
+        "25 वर्षे वारंटी"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12",
+        "वीज बिल",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "mahadbt.maharashtra.gov.in",
+      "createdAt": "2026-05-21T16:54:03.742Z",
+      "updatedAt": "2026-05-21T16:54:03.742Z"
+    },
+    {
+      "id": "mahadbt-baliraja",
+      "titleEn": "Baliraja Krishi Yantra Anudan Yojana",
+      "titleMr": "बलिराजा कृषी यंत्र अनुदान योजना",
+      "titleHi": "बलिराजा कृषि यंत्र अनुदान योजना",
+      "descriptionEn": "Subsidy on purchase of various agricultural implements and machinery.",
+      "descriptionMr": "विविध कृषी अवजारे आणि यंत्रसामग्री खरेदीवर अनुदान.",
+      "descriptionHi": "विभिन्न कृषि उपकरण और मशीनरी की खरीद पर सब्सिडी.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://mahadbt.maharashtra.gov.in",
+      "category": "उपकरणे",
+      "eligibility": [
+        "महाराष्ट्रातील शेतकरी",
+        "लहान/सीमांत/इतर शेतकरी",
+        "प्रथमच यंत्र खरेदी"
+      ],
+      "benefits": [
+        "50% अनुदान (सामान्य)",
+        "60% अनुदान (SC/ST)",
+        "विविध यंत्रांसाठी",
+        "कमाल ₹1 लाख"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12",
+        "जात प्रमाणपत्र",
+        "बँक खाते तपशील",
+        "Quotation"
+      ],
+      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "mahadbt.maharashtra.gov.in",
+      "createdAt": "2026-05-21T16:54:03.742Z",
+      "updatedAt": "2026-05-21T16:54:03.742Z"
     },
     {
       "id": "krishi-mh-soil",
@@ -246,8 +460,8 @@
       "deadline": null,
       "isActive": true,
       "source": "krishi.maharashtra.gov.in",
-      "createdAt": "2026-05-21T03:55:20.861Z",
-      "updatedAt": "2026-05-21T03:55:20.861Z"
+      "createdAt": "2026-05-21T16:54:03.743Z",
+      "updatedAt": "2026-05-21T16:54:03.743Z"
     },
     {
       "id": "krishi-mh-organic",
@@ -282,78 +496,8 @@
       "deadline": null,
       "isActive": true,
       "source": "krishi.maharashtra.gov.in",
-      "createdAt": "2026-05-21T03:55:20.861Z",
-      "updatedAt": "2026-05-21T03:55:20.861Z"
-    },
-    {
-      "id": "indiagov-pmkmy",
-      "titleEn": "Pradhan Mantri Kisan Maan Dhan Yojana (PM-KMY)",
-      "titleMr": "प्रधानमंत्री किसान मानधन योजना (PM-KMY)",
-      "titleHi": "प्रधानमंत्री किसान मान-धन योजना (PM-KMY)",
-      "descriptionEn": "Pension scheme for small and marginal farmers providing Rs. 3000 monthly pension after 60 years.",
-      "descriptionMr": "लहान आणि सीमांत शेतकऱ्यांसाठी 60 वर्षांनंतर मासिक ₹3000 पेन्शन योजना.",
-      "descriptionHi": "छोटे और सीमांत किसानों के लिए 60 वर्ष के बाद मासिक ₹3000 पेंशन योजना.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://maandhan.in",
-      "category": "इतर",
-      "eligibility": [
-        "18-40 वर्षे वय",
-        "2 हेक्टर पर्यंत जमीन",
-        "लहान/सीमांत शेतकरी"
-      ],
-      "benefits": [
-        "60 वर्षांनंतर ₹3000/महिना पेन्शन",
-        "कमी योगदान (₹55-₹200/महिना)",
-        "आजीवन पेन्शन"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "बँक पासबुक",
-        "7/12",
-        "वय पुरावा"
-      ],
-      "applicationProcess": "CSC सेंटर वर जाऊन नोंदणी करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "india.gov.in",
-      "createdAt": "2026-05-21T03:55:20.861Z",
-      "updatedAt": "2026-05-21T03:55:20.861Z"
-    },
-    {
-      "id": "indiagov-pmay",
-      "titleEn": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
-      "titleMr": "प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)",
-      "titleHi": "प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)",
-      "descriptionEn": "Housing scheme for rural poor providing financial assistance for pucca house construction.",
-      "descriptionMr": "ग्रामीण गरीबांसाठी पक्के घर बांधणीसाठी आर्थिक सहाय्य योजना.",
-      "descriptionHi": "ग्रामीण गरीबों के लिए पक्के घर निर्माण के लिए वित्तीय सहायता योजना.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://pmayg.nic.in",
-      "category": "इतर",
-      "eligibility": [
-        "ग्रामीण भागातील गरीब",
-        "कच्चे घरात राहणारे",
-        "SECC 2011 यादीत नाव"
-      ],
-      "benefits": [
-        "मैदानी भागात ₹1.20 लाख",
-        "डोंगराळ भागात ₹1.30 लाख",
-        "90 दिवसांचे MGNREGA रोजगार"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "जॉब कार्ड",
-        "बँक खाते तपशील",
-        "जमीन दस्तऐवज"
-      ],
-      "applicationProcess": "ग्रामपंचायत/ग्रामसेवक कार्यालयात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "india.gov.in",
-      "createdAt": "2026-05-21T03:55:20.861Z",
-      "updatedAt": "2026-05-21T03:55:20.861Z"
+      "createdAt": "2026-05-21T16:54:03.743Z",
+      "updatedAt": "2026-05-21T16:54:03.743Z"
     }
   ]
 }
