@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-21T17:25:10.694Z",
-  "totalSchemes": 70,
+  "lastUpdated": "2026-05-21T17:40:27.826Z",
+  "totalSchemes": 61,
   "schemes": [
     {
       "id": "myscheme-drpdhma",
@@ -29,8 +29,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.822Z",
+      "updatedAt": "2026-05-21T17:40:27.822Z"
     },
     {
       "id": "myscheme-fadse",
@@ -59,8 +59,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.822Z",
+      "updatedAt": "2026-05-21T17:40:27.822Z"
     },
     {
       "id": "myscheme-tmdvso",
@@ -89,8 +89,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.822Z",
+      "updatedAt": "2026-05-21T17:40:27.822Z"
     },
     {
       "id": "myscheme-vtvscsgit",
@@ -119,8 +119,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.822Z",
+      "updatedAt": "2026-05-21T17:40:27.822Z"
     },
     {
       "id": "myscheme-cts-maharashtra",
@@ -149,8 +149,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.822Z",
+      "updatedAt": "2026-05-21T17:40:27.822Z"
     },
     {
       "id": "myscheme-msym",
@@ -179,8 +179,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.822Z",
+      "updatedAt": "2026-05-21T17:40:27.822Z"
     },
     {
       "id": "myscheme-tls",
@@ -209,8 +209,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.822Z",
+      "updatedAt": "2026-05-21T17:40:27.822Z"
     },
     {
       "id": "myscheme-igteicm",
@@ -239,8 +239,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.822Z",
+      "updatedAt": "2026-05-21T17:40:27.822Z"
     },
     {
       "id": "myscheme-fat75opd",
@@ -269,8 +269,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-fawwrcw",
@@ -299,8 +299,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-spremsd",
@@ -329,8 +329,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-ma-maha",
@@ -359,8 +359,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-lmmls",
@@ -389,8 +389,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-namo-shetkari-mahasanman-nidhi-yojana",
@@ -419,8 +419,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-igoapsm",
@@ -449,8 +449,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-aabym",
@@ -479,8 +479,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-fandsd",
@@ -509,8 +509,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-mcf",
@@ -539,8 +539,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-ycmvyfvjnts",
@@ -569,8 +569,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-hiip",
@@ -599,8 +599,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-faaadp",
@@ -629,8 +629,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-stiti",
@@ -659,8 +659,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-sbssps",
@@ -689,8 +689,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-pocra",
@@ -719,8 +719,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-ignwpsm",
@@ -749,8 +749,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-ptstgk",
@@ -779,8 +779,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-mkym",
@@ -809,8 +809,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-nfbsm",
@@ -839,8 +839,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-sma",
@@ -869,8 +869,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-fagcaha18",
@@ -899,8 +899,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.685Z",
-      "updatedAt": "2026-05-21T17:25:10.685Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-mi-maha",
@@ -929,8 +929,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-lts",
@@ -959,8 +959,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-lgss",
@@ -989,8 +989,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-kvdgssy",
@@ -1019,8 +1019,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-rassnb",
@@ -1049,8 +1049,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-mmlby",
@@ -1079,8 +1079,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-fatnukyv",
@@ -1109,8 +1109,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-l50ss",
@@ -1139,8 +1139,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-spmsd",
@@ -1169,8 +1169,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-tssad",
@@ -1199,8 +1199,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-fasetdp",
@@ -1229,8 +1229,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-gaoah",
@@ -1259,8 +1259,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-bhausaheb-fundkar-horticulture-plantataion-scheme",
@@ -1289,8 +1289,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-cmegp",
@@ -1319,8 +1319,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-rcsmms",
@@ -1349,8 +1349,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-fsme",
@@ -1379,8 +1379,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-fa",
@@ -1409,8 +1409,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-fafnd",
@@ -1439,8 +1439,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-igndpsm",
@@ -1469,8 +1469,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-rmscitc",
@@ -1499,8 +1499,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-vntbds",
@@ -1529,8 +1529,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-sgngs",
@@ -1559,8 +1559,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-mjpjay",
@@ -1589,8 +1589,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-gopinath-munde-shetkari-apghat-suraksha-sanugrah-audhan-yojana",
@@ -1619,8 +1619,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-kpdgbcpd",
@@ -1649,8 +1649,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-spaa",
@@ -1679,8 +1679,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-ltltscosmuscp",
@@ -1709,8 +1709,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-pmtaispttshgosc",
@@ -1739,8 +1739,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-mmykpy",
@@ -1769,8 +1769,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-gsgos",
@@ -1799,8 +1799,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     },
     {
       "id": "myscheme-chief-minister-sustainable-agriculture-irrigation-scheme",
@@ -1829,326 +1829,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:25:10.686Z",
-      "updatedAt": "2026-05-21T17:25:10.686Z"
-    },
-    {
-      "id": "mahadbt-karjmukti",
-      "titleEn": "Mahatma Jyotiba Phule Shetkari Karjmukti Yojana",
-      "titleMr": "महात्मा ज्योतिबा फुले शेतकरी कर्जमुक्ती योजना",
-      "titleHi": "महात्मा ज्योतिबा फुले किसान ऋण माफी योजना",
-      "descriptionEn": "Farm loan waiver for small and marginal farmers with loans up to Rs. 2 lakh.",
-      "descriptionMr": "लहान आणि सीमांत शेतकऱ्यांसाठी ₹2 लाख पर्यंत कर्ज माफी योजना.",
-      "descriptionHi": "छोटे और सीमांत किसानों के लिए ₹2 लाख तक के ऋण माफी योजना.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://krishi.maharashtra.gov.in",
-      "category": "कर्ज",
-      "eligibility": [
-        "महाराष्ट्रातील शेतकरी",
-        "5 हेक्टर पर्यंत जमीन",
-        "₹2 लाख पर्यंत कर्ज"
-      ],
-      "benefits": [
-        "₹2 लाख पर्यंत कर्ज माफी",
-        "व्याज माफी",
-        "थेट बँक हस्तांतरण"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "7/12, 8A",
-        "कर्ज पुस्तिका",
-        "बँक स्टेटमेंट"
-      ],
-      "applicationProcess": "तलाठी/ग्रामसेवक कार्यालयात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "mahadbt.maharashtra.gov.in",
-      "createdAt": "2026-05-21T17:25:10.482Z",
-      "updatedAt": "2026-05-21T17:25:10.482Z"
-    },
-    {
-      "id": "mahadbt-tractor",
-      "titleEn": "Tractor Subsidy Scheme",
-      "titleMr": "ट्रॅक्टर अनुदान योजना",
-      "titleHi": "ट्रैक्टर सब्सिडी योजना",
-      "descriptionEn": "Subsidy on purchase of tractors for small and marginal farmers.",
-      "descriptionMr": "लहान आणि सीमांत शेतकऱ्यांसाठी ट्रॅक्टर खरेदीवर अनुदान.",
-      "descriptionHi": "छोटे और सीमांत किसानों के लिए ट्रैक्टर खरीद पर सब्सिडी.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://mahadbt.maharashtra.gov.in",
-      "category": "सबसिडी",
-      "eligibility": [
-        "महाराष्ट्रातील शेतकरी",
-        "लहान/सीमांत शेतकरी",
-        "प्रथमच ट्रॅक्टर खरेदी"
-      ],
-      "benefits": [
-        "40% अनुदान (SC/ST)",
-        "25% अनुदान (इतर)",
-        "कमाल ₹90,000"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "7/12",
-        "जात प्रमाणपत्र",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "mahadbt.maharashtra.gov.in",
-      "createdAt": "2026-05-21T17:25:10.482Z",
-      "updatedAt": "2026-05-21T17:25:10.482Z"
-    },
-    {
-      "id": "mahadbt-drip",
-      "titleEn": "Drip Irrigation Subsidy",
-      "titleMr": "ठिबक सिंचन अनुदान योजना",
-      "titleHi": "ड्रिप सिंचाई सब्सिडी योजना",
-      "descriptionEn": "Subsidy for installation of drip irrigation systems to conserve water.",
-      "descriptionMr": "पाणी बचतीसाठी ठिबक सिंचन प्रणाली बसविण्यासाठी अनुदान.",
-      "descriptionHi": "पानी बचाने के लिए ड्रिप सिंचाई प्रणाली स्थापित करने के लिए सब्सिडी.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://mahadbt.maharashtra.gov.in",
-      "category": "सबसिडी",
-      "eligibility": [
-        "महाराष्ट्रातील शेतकरी",
-        "किमान 1 हेक्टर जमीन",
-        "पाणी स्रोत उपलब्ध"
-      ],
-      "benefits": [
-        "लहान शेतकरी 55% अनुदान",
-        "इतर शेतकरी 45% अनुदान",
-        "SC/ST 60% अनुदान"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "7/12",
-        "पाणी स्रोत पुरावा",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "mahadbt.maharashtra.gov.in",
-      "createdAt": "2026-05-21T17:25:10.482Z",
-      "updatedAt": "2026-05-21T17:25:10.482Z"
-    },
-    {
-      "id": "mahadbt-solar",
-      "titleEn": "Solar Pump Subsidy Scheme",
-      "titleMr": "सौर पंप अनुदान योजना",
-      "titleHi": "सोलर पंप सब्सिडी योजना",
-      "descriptionEn": "Subsidy for installation of solar-powered agricultural pumps to reduce electricity costs.",
-      "descriptionMr": "वीज खर्च कमी करण्यासाठी सौर ऊर्जेवर चालणारे शेती पंप बसविण्यासाठी अनुदान.",
-      "descriptionHi": "बिजली की लागत कम करने के लिए सौर ऊर्जा से चलने वाले कृषि पंप स्थापित करने के लिए सब्सिडी.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://mahadbt.maharashtra.gov.in",
-      "category": "सबसिडी",
-      "eligibility": [
-        "महाराष्ट्रातील शेतकरी",
-        "शेतीसाठी वीज कनेक्शन",
-        "किमान 1 हेक्टर जमीन"
-      ],
-      "benefits": [
-        "3 HP पंप 90% अनुदान",
-        "5 HP पंप 90% अनुदान",
-        "वीज बिल शून्य",
-        "25 वर्षे वारंटी"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "7/12",
-        "वीज बिल",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "mahadbt.maharashtra.gov.in",
-      "createdAt": "2026-05-21T17:25:10.482Z",
-      "updatedAt": "2026-05-21T17:25:10.482Z"
-    },
-    {
-      "id": "mahadbt-baliraja",
-      "titleEn": "Baliraja Krishi Yantra Anudan Yojana",
-      "titleMr": "बलिराजा कृषी यंत्र अनुदान योजना",
-      "titleHi": "बलिराजा कृषि यंत्र अनुदान योजना",
-      "descriptionEn": "Subsidy on purchase of various agricultural implements and machinery.",
-      "descriptionMr": "विविध कृषी अवजारे आणि यंत्रसामग्री खरेदीवर अनुदान.",
-      "descriptionHi": "विभिन्न कृषि उपकरण और मशीनरी की खरीद पर सब्सिडी.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://mahadbt.maharashtra.gov.in",
-      "category": "उपकरणे",
-      "eligibility": [
-        "महाराष्ट्रातील शेतकरी",
-        "लहान/सीमांत/इतर शेतकरी",
-        "प्रथमच यंत्र खरेदी"
-      ],
-      "benefits": [
-        "50% अनुदान (सामान्य)",
-        "60% अनुदान (SC/ST)",
-        "विविध यंत्रांसाठी",
-        "कमाल ₹1 लाख"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "7/12",
-        "जात प्रमाणपत्र",
-        "बँक खाते तपशील",
-        "Quotation"
-      ],
-      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "mahadbt.maharashtra.gov.in",
-      "createdAt": "2026-05-21T17:25:10.483Z",
-      "updatedAt": "2026-05-21T17:25:10.483Z"
-    },
-    {
-      "id": "krishi-mh-soil",
-      "titleEn": "Soil Health Card Scheme",
-      "titleMr": "माती आरोग्य कार्ड योजना",
-      "titleHi": "मृदा स्वास्थ्य कार्ड योजना",
-      "descriptionEn": "Free soil testing and health card for improving soil fertility.",
-      "descriptionMr": "माती सुपीकता सुधारण्यासाठी मोफत माती चाचणी आणि आरोग्य कार्ड.",
-      "descriptionHi": "मिट्टी की उर्वरता सुधारने के लिए मुफ्त मिट्टी परीक्षण और स्वास्थ्य कार्ड.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://krishi.maharashtra.gov.in",
-      "category": "प्रशिक्षण",
-      "eligibility": [
-        "सर्व शेतकरी",
-        "कोणतेही क्षेत्रफळ निर्बंध नाही"
-      ],
-      "benefits": [
-        "मोफत माती चाचणी",
-        "12 पॅरामीटर्स",
-        "खत शिफारसी",
-        "ऑनलाइन कार्ड"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "7/12",
-        "मोबाइल नंबर"
-      ],
-      "applicationProcess": "कृषी विभाग कार्यालय/KVK/माती प्रयोगशाळेत माती नमुना द्या",
-      "deadline": null,
-      "isActive": true,
-      "source": "krishi.maharashtra.gov.in",
-      "createdAt": "2026-05-21T17:25:10.483Z",
-      "updatedAt": "2026-05-21T17:25:10.483Z"
-    },
-    {
-      "id": "krishi-mh-organic",
-      "titleEn": "Paramparagat Krishi Vikas Yojana (PKVY)",
-      "titleMr": "परंपरागत कृषी विकास योजना (PKVY)",
-      "titleHi": "परंपरागत कृषि विकास योजना (PKVY)",
-      "descriptionEn": "Organic farming promotion with Rs. 50,000 per hectare for 3 years.",
-      "descriptionMr": "सेंद्रिय शेती प्रोत्साहन - 3 वर्षांसाठी प्रति हेक्टर ₹50,000.",
-      "descriptionHi": "जैविक खेती प्रोत्साहन - 3 वर्षों के लिए प्रति हेक्टेयर ₹50,000.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://pgsindia-ncof.gov.in",
-      "category": "सबसिडी",
-      "eligibility": [
-        "शेतकरी गट (50+)",
-        "किमान 50 हेक्टर",
-        "PGS प्रमाणीकरण"
-      ],
-      "benefits": [
-        "₹50,000/हेक्टर (3 वर्षे)",
-        "सेंद्रिय खत सबसिडी",
-        "प्रशिक्षण",
-        "प्रमाणीकरण मोफत"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "7/12",
-        "गट नोंदणी",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "50 शेतकऱ्यांचा गट तयार करा आणि कृषी विभागात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "krishi.maharashtra.gov.in",
-      "createdAt": "2026-05-21T17:25:10.483Z",
-      "updatedAt": "2026-05-21T17:25:10.483Z"
-    },
-    {
-      "id": "indiagov-pmkmy",
-      "titleEn": "Pradhan Mantri Kisan Maan Dhan Yojana (PM-KMY)",
-      "titleMr": "प्रधानमंत्री किसान मानधन योजना (PM-KMY)",
-      "titleHi": "प्रधानमंत्री किसान मान-धन योजना (PM-KMY)",
-      "descriptionEn": "Pension scheme for small and marginal farmers providing Rs. 3000 monthly pension after 60 years.",
-      "descriptionMr": "लहान आणि सीमांत शेतकऱ्यांसाठी 60 वर्षांनंतर मासिक ₹3000 पेन्शन योजना.",
-      "descriptionHi": "छोटे और सीमांत किसानों के लिए 60 वर्ष के बाद मासिक ₹3000 पेंशन योजना.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://maandhan.in",
-      "category": "इतर",
-      "eligibility": [
-        "18-40 वर्षे वय",
-        "2 हेक्टर पर्यंत जमीन",
-        "लहान/सीमांत शेतकरी"
-      ],
-      "benefits": [
-        "60 वर्षांनंतर ₹3000/महिना पेन्शन",
-        "कमी योगदान (₹55-₹200/महिना)",
-        "आजीवन पेन्शन"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "बँक पासबुक",
-        "7/12",
-        "वय पुरावा"
-      ],
-      "applicationProcess": "CSC सेंटर वर जाऊन नोंदणी करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "india.gov.in",
-      "createdAt": "2026-05-21T17:25:10.483Z",
-      "updatedAt": "2026-05-21T17:25:10.483Z"
-    },
-    {
-      "id": "indiagov-pmay",
-      "titleEn": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
-      "titleMr": "प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)",
-      "titleHi": "प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)",
-      "descriptionEn": "Housing scheme for rural poor providing financial assistance for pucca house construction.",
-      "descriptionMr": "ग्रामीण गरीबांसाठी पक्के घर बांधणीसाठी आर्थिक सहाय्य योजना.",
-      "descriptionHi": "ग्रामीण गरीबों के लिए पक्के घर निर्माण के लिए वित्तीय सहायता योजना.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://pmayg.nic.in",
-      "category": "इतर",
-      "eligibility": [
-        "ग्रामीण भागातील गरीब",
-        "कच्चे घरात राहणारे",
-        "SECC 2011 यादीत नाव"
-      ],
-      "benefits": [
-        "मैदानी भागात ₹1.20 लाख",
-        "डोंगराळ भागात ₹1.30 लाख",
-        "90 दिवसांचे MGNREGA रोजगार"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "जॉब कार्ड",
-        "बँक खाते तपशील",
-        "जमीन दस्तऐवज"
-      ],
-      "applicationProcess": "ग्रामपंचायत/ग्रामसेवक कार्यालयात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "india.gov.in",
-      "createdAt": "2026-05-21T17:25:10.483Z",
-      "updatedAt": "2026-05-21T17:25:10.483Z"
+      "createdAt": "2026-05-21T17:40:27.823Z",
+      "updatedAt": "2026-05-21T17:40:27.823Z"
     }
   ]
 }
