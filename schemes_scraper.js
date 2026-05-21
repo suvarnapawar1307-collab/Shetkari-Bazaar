@@ -26,10 +26,121 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 // ═══════════════════════════════════════════════════════════════════════════
 
 async function fetchFromMyScheme() {
-  console.log('🔍 Fetching from MyScheme.gov.in...');
+  console.log('🔍 Fetching from MyScheme.gov.in API...');
   
-  // Return curated schemes since API is not accessible
-  // These are real, verified government schemes
+  try {
+    // Use the official MyScheme API v6
+    const apiUrl = 'https://api.myscheme.gov.in/search/v6/schemes';
+    const params = new URLSearchParams({
+      lang: 'mr',
+      q: JSON.stringify([
+        { identifier: 'level', value: 'State' },
+        { identifier: 'beneficiaryState', value: 'Maharashtra' }
+      ]),
+      keyword: '',
+      sort: 'multiple_sort',
+      from: '0',
+      size: '100' // Fetch 100 schemes
+    });
+
+    const response = await axios.get(`${apiUrl}?${params}`, {
+      headers: {
+        'accept': 'application/json, text/plain, */*',
+        'accept-language': 'en-US,en;q=0.9',
+        'origin': 'https://www.myscheme.gov.in',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-site',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36',
+        'x-api-key': 'tYTy5eEhlu9rFjyxuCr7ra7ACp4dv1RH8gWuHTDc'
+      },
+      timeout: 30000,
+    });
+
+    // Check correct response structure: response.data.data.hits.items
+    if (response.data && response.data.data && response.data.data.hits && response.data.data.hits.items) {
+      const allItems = response.data.data.hits.items;
+      
+      const schemes = allItems
+        .filter(s => {
+          // Since we already filtered for Maharashtra state schemes in the API call,
+          // we can be less restrictive here. Just exclude schemes that are clearly not relevant.
+          // Most Maharashtra state schemes are agriculture-related anyway.
+          const fields = s.fields || {};
+          const titleMr = (fields.schemeName || '').toLowerCase();
+          const titleEn = (fields.schemeNameEng || '').toLowerCase();
+          const descMr = (fields.briefDescription || '').toLowerCase();
+          const descEn = (fields.briefDescriptionEng || '').toLowerCase();
+          
+          // Exclude clearly non-agricultural schemes (education, health, housing only)
+          const isEducationOnly = (titleEn.includes('education') || titleEn.includes('school') || titleEn.includes('student')) &&
+                                   !titleEn.includes('farm') && !titleEn.includes('agricult');
+          const isHealthOnly = (titleEn.includes('health') || titleEn.includes('medical') || titleEn.includes('hospital')) &&
+                               !titleEn.includes('farm') && !titleEn.includes('agricult');
+          
+          // Include everything else (most Maharashtra schemes benefit farmers)
+          return !isEducationOnly && !isHealthOnly;
+        })
+        .map((s, i) => {
+          const fields = s.fields || {};
+          
+          // Determine category
+          let category = 'इतर';
+          const titleMr = (fields.schemeName || '').toLowerCase();
+          const titleEn = (fields.schemeNameEng || '').toLowerCase();
+          const descMr = (fields.briefDescription || '').toLowerCase();
+          const descEn = (fields.briefDescriptionEng || '').toLowerCase();
+          
+          if (titleMr.includes('कर्ज') || titleEn.includes('loan') || titleEn.includes('credit')) {
+            category = 'कर्ज';
+          } else if (titleMr.includes('विमा') || titleEn.includes('insurance') || titleMr.includes('बीमा')) {
+            category = 'विमा';
+          } else if (titleMr.includes('अनुदान') || titleEn.includes('subsidy') || titleMr.includes('सबसिडी')) {
+            category = 'सबसिडी';
+          } else if (titleMr.includes('प्रशिक्षण') || titleEn.includes('training')) {
+            category = 'प्रशिक्षण';
+          } else if (titleMr.includes('यंत्र') || titleEn.includes('machinery') || titleEn.includes('equipment')) {
+            category = 'उपकरणे';
+          }
+
+          // Build website URL from slug
+          const websiteUrl = fields.slug 
+            ? `https://www.myscheme.gov.in/schemes/${fields.slug}`
+            : 'https://www.myscheme.gov.in';
+
+          return {
+            id: `myscheme-${fields.schemeId || fields.slug || s.id || i}`,
+            titleEn: fields.schemeNameEng || fields.schemeName || '',
+            titleMr: fields.schemeName || fields.schemeNameEng || '',
+            titleHi: fields.schemeNameHin || fields.schemeName || '',
+            descriptionEn: fields.briefDescriptionEng || fields.briefDescription || 'Government scheme',
+            descriptionMr: fields.briefDescription || fields.briefDescriptionEng || 'सरकारी योजना',
+            descriptionHi: fields.briefDescriptionHin || fields.briefDescription || 'सरकारी योजना',
+            imageUrl: null,
+            documentUrl: null,
+            websiteUrl: websiteUrl,
+            category: category,
+            eligibility: ['भारतीय नागरिक', 'महाराष्ट्र राज्य'],
+            benefits: ['सरकारी योजना लाभ'],
+            documents: ['आधार कार्ड', 'बँक खाते तपशील'],
+            applicationProcess: 'MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा',
+            deadline: null,
+            isActive: true,
+            source: 'myscheme.gov.in',
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          };
+        });
+
+      console.log(`  ✅ Fetched ${schemes.length} agriculture schemes from MyScheme API`);
+      return schemes;
+    }
+  } catch (error) {
+    console.log(`  ⚠️  MyScheme API failed: ${error.message}`);
+  }
+
+  // Fallback to curated data if API fails
+  console.log('  ℹ️  Using curated fallback data...');
   const schemes = [
     {
       id: 'myscheme-pmkisan',
@@ -97,97 +208,9 @@ async function fetchFromMyScheme() {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
-    {
-      id: 'myscheme-pmkmy',
-      titleEn: 'Pradhan Mantri Kisan Maan Dhan Yojana (PM-KMY)',
-      titleMr: 'प्रधानमंत्री किसान मानधन योजना (PM-KMY)',
-      titleHi: 'प्रधानमंत्री किसान मान-धन योजना (PM-KMY)',
-      descriptionEn: 'Pension scheme for small and marginal farmers providing Rs. 3000 monthly pension after 60 years.',
-      descriptionMr: 'लहान आणि सीमांत शेतकऱ्यांसाठी 60 वर्षांनंतर मासिक ₹3000 पेन्शन योजना.',
-      descriptionHi: 'छोटे और सीमांत किसानों के लिए 60 वर्ष के बाद मासिक ₹3000 पेंशन योजना.',
-      imageUrl: null,
-      documentUrl: null,
-      websiteUrl: 'https://maandhan.in',
-      category: 'इतर',
-      eligibility: ['18-40 वर्षे वय', '2 हेक्टर पर्यंत जमीन', 'लहान/सीमांत शेतकरी'],
-      benefits: ['60 वर्षांनंतर ₹3000/महिना पेन्शन', 'कमी योगदान (₹55-₹200/महिना)', 'आजीवन पेन्शन'],
-      documents: ['आधार कार्ड', 'बँक पासबुक', '7/12', 'वय पुरावा'],
-      applicationProcess: 'CSC सेंटर वर जाऊन नोंदणी करा',
-      deadline: null,
-      isActive: true,
-      source: 'myscheme.gov.in',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    },
-    {
-      id: 'myscheme-nfsm',
-      titleEn: 'National Food Security Mission (NFSM)',
-      titleMr: 'राष्ट्रीय अन्न सुरक्षा मिशन (NFSM)',
-      titleHi: 'राष्ट्रीय खाद्य सुरक्षा मिशन (NFSM)',
-      descriptionEn: 'Increase production of rice, wheat, pulses and coarse cereals through area expansion and productivity enhancement.',
-      descriptionMr: 'तांदूळ, गहू, डाळी आणि मोटे धान्य उत्पादन वाढविण्यासाठी क्षेत्र विस्तार आणि उत्पादकता वाढ.',
-      descriptionHi: 'चावल, गेहूं, दालें और मोटे अनाज का उत्पादन बढ़ाने के लिए क्षेत्र विस्तार और उत्पादकता वृद्धि.',
-      imageUrl: null,
-      documentUrl: null,
-      websiteUrl: 'https://nfsm.gov.in',
-      category: 'सबसिडी',
-      eligibility: ['सर्व शेतकरी', 'धान्य पीक घेणारे', 'डाळी पीक घेणारे'],
-      benefits: ['बियाणे सबसिडी', 'खत सबसिडी', 'यंत्रसामग्री सबसिडी', 'तांत्रिक मार्गदर्शन'],
-      documents: ['आधार कार्ड', '7/12 उतारा', 'बँक खाते तपशील'],
-      applicationProcess: 'जवळच्या कृषी विभाग कार्यालयात अर्ज करा',
-      deadline: null,
-      isActive: true,
-      source: 'myscheme.gov.in',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    },
-    {
-      id: 'myscheme-rkvy',
-      titleEn: 'Rashtriya Krishi Vikas Yojana (RKVY)',
-      titleMr: 'राष्ट्रीय कृषी विकास योजना (RKVY)',
-      titleHi: 'राष्ट्रीय कृषि विकास योजना (RKVY)',
-      descriptionEn: 'State Plan Scheme for ensuring holistic development of agriculture and allied sectors.',
-      descriptionMr: 'कृषी आणि संबंधित क्षेत्रांच्या सर्वांगीण विकासासाठी राज्य योजना.',
-      descriptionHi: 'कृषि और संबद्ध क्षेत्रों के समग्र विकास को सुनिश्चित करने के लिए राज्य योजना।',
-      imageUrl: null,
-      documentUrl: null,
-      websiteUrl: 'https://rkvy.nic.in',
-      category: 'सबसिडी',
-      eligibility: ['शेतकरी', 'कृषी उद्योजक', 'शेतकरी गट'],
-      benefits: ['कृषी यंत्रसामग्री सबसिडी', 'सिंचन सुविधा', 'कृषी पायाभूत सुविधा', 'प्रशिक्षण'],
-      documents: ['आधार कार्ड', '7/12', 'प्रकल्प अहवाल', 'बँक खाते तपशील'],
-      applicationProcess: 'जिल्हा कृषी कार्यालयात प्रकल्प सादर करा',
-      deadline: null,
-      isActive: true,
-      source: 'myscheme.gov.in',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    },
-    {
-      id: 'myscheme-pmay',
-      titleEn: 'Pradhan Mantri Awas Yojana - Gramin (PMAY-G)',
-      titleMr: 'प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)',
-      titleHi: 'प्रधानमंत्री आवास योजना - ग्रामीण (PMAY-G)',
-      descriptionEn: 'Housing scheme for rural poor providing financial assistance for pucca house construction.',
-      descriptionMr: 'ग्रामीण गरीबांसाठी पक्के घर बांधणीसाठी आर्थिक सहाय्य योजना.',
-      descriptionHi: 'ग्रामीण गरीबों के लिए पक्के घर निर्माण के लिए वित्तीय सहायता योजना.',
-      imageUrl: null,
-      documentUrl: null,
-      websiteUrl: 'https://pmayg.nic.in',
-      category: 'इतर',
-      eligibility: ['ग्रामीण भागातील गरीब', 'कच्चे घरात राहणारे', 'SECC 2011 यादीत नाव'],
-      benefits: ['मैदानी भागात ₹1.20 लाख', 'डोंगराळ भागात ₹1.30 लाख', '90 दिवसांचे MGNREGA रोजगार'],
-      documents: ['आधार कार्ड', 'जॉब कार्ड', 'बँक खाते तपशील', 'जमीन दस्तऐवज'],
-      applicationProcess: 'ग्रामपंचायत/ग्रामसेवक कार्यालयात अर्ज करा',
-      deadline: null,
-      isActive: true,
-      source: 'myscheme.gov.in',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    },
   ];
 
-  console.log(`  ✅ Loaded ${schemes.length} verified schemes from MyScheme`);
+  console.log(`  ✅ Loaded ${schemes.length} curated schemes as fallback`);
   return schemes;
 }
 
