@@ -271,7 +271,7 @@ async function fetchFromKrishiMaharashtra() {
 // ═══════════════════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════════════════════
-// 4. GovtSchemes.in - Government Schemes Portal
+// 4. GovtSchemes.in - Government Schemes Portal (with Detailed Extraction)
 // ═══════════════════════════════════════════════════════════════════════════
 
 async function fetchFromGovtSchemes() {
@@ -283,8 +283,9 @@ async function fetchFromGovtSchemes() {
       'https://www.govtschemes.in/taxonomies/term/111', // Farmer
     ];
     
-    let allSchemes = [];
+    let schemeLinks = [];
     
+    // Step 1: Collect scheme links
     for (const categoryUrl of categories) {
       const response = await axios.get(categoryUrl, { 
         headers: HEADERS, 
@@ -328,7 +329,7 @@ async function fetchFromGovtSchemes() {
         
         // Only include Maharashtra or Central schemes (not other states)
         if (!isMaharashtra && !isCentral) return;
-        if (isOtherState && !isCentral) return; // Exclude other state schemes unless they're central
+        if (isOtherState && !isCentral) return;
         
         // Exclude non-scheme links
         const excludeKeywords = [
@@ -354,63 +355,166 @@ async function fetchFromGovtSchemes() {
         
         const fullUrl = href.startsWith('http') ? href : 'https://www.govtschemes.in' + href;
         
-        // Determine category
-        let category = 'सबसिडी';
-        if (lowerText.includes('loan') || lowerText.includes('credit') || lowerText.includes('कर्ज')) {
-          category = 'कर्ज';
-        } else if (lowerText.includes('insurance') || lowerText.includes('bima') || lowerText.includes('विमा')) {
-          category = 'विमा';
-        } else if (lowerText.includes('training') || lowerText.includes('प्रशिक्षण')) {
-          category = 'प्रशिक्षण';
-        } else if (lowerText.includes('machinery') || lowerText.includes('tractor') || lowerText.includes('equipment') || lowerText.includes('यंत्र')) {
-          category = 'उपकरणे';
-        } else if (lowerText.includes('electricity') || lowerText.includes('vij') || lowerText.includes('वीज') || lowerText.includes('power')) {
-          category = 'वीज';
-        } else if (lowerText.includes('irrigation') || lowerText.includes('water') || lowerText.includes('सिंचन') || lowerText.includes('पाणी')) {
-          category = 'सिंचन';
-        } else if (lowerText.includes('pension') || lowerText.includes('पेन्शन')) {
-          category = 'इतर';
-        }
-        
-        allSchemes.push({
-          id: `govtschemes-${text.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase().substring(0, 50)}`,
-          titleEn: text,
-          titleMr: text,
-          titleHi: text,
-          descriptionEn: `${text} - Government scheme for farmers`,
-          descriptionMr: `${text} - शेतकऱ्यांसाठी सरकारी योजना`,
-          descriptionHi: `${text} - किसानों के लिए सरकारी योजना`,
-          imageUrl: null,
-          documentUrl: null,
-          websiteUrl: fullUrl,
-          category: category,
-          eligibility: isMaharashtra ? ['महाराष्ट्रातील शेतकरी', 'भारतीय नागरिक'] : ['भारतीय नागरिक', 'शेतकरी'],
-          benefits: ['सरकारी योजना लाभ'],
-          documents: ['आधार कार्ड', 'बँक खाते तपशील'],
-          applicationProcess: 'अधिकृत वेबसाइट वर ऑनलाइन अर्ज करा',
-          deadline: null,
-          isActive: true,
-          source: 'govtschemes.in',
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-        });
+        schemeLinks.push({ title: text, url: fullUrl });
       });
       
       await sleep(2000);
     }
     
     // Remove duplicates
-    const uniqueSchemes = [];
+    const uniqueLinks = [];
     const seen = new Set();
-    for (const scheme of allSchemes) {
-      if (!seen.has(scheme.id)) {
-        seen.add(scheme.id);
-        uniqueSchemes.push(scheme);
+    for (const link of schemeLinks) {
+      if (!seen.has(link.url)) {
+        seen.add(link.url);
+        uniqueLinks.push(link);
       }
     }
     
-    console.log(`  ✅ Fetched ${uniqueSchemes.length} schemes from GovtSchemes.in (Maharashtra + Central)`);
-    return uniqueSchemes;
+    console.log(`  📋 Found ${uniqueLinks.length} scheme links`);
+    
+    // Step 2: Fetch detailed information for each scheme (limit to 10 to avoid overload)
+    const schemesToFetch = uniqueLinks.slice(0, 10);
+    const schemes = [];
+    
+    for (let i = 0; i < schemesToFetch.length; i++) {
+      const link = schemesToFetch[i];
+      console.log(`  [${i + 1}/${schemesToFetch.length}] Fetching: ${link.title}`);
+      
+      try {
+        const response = await axios.get(link.url, { headers: HEADERS, timeout: 30000 });
+        const $ = cheerio.load(response.data);
+        
+        // Remove unwanted elements
+        $('script, style, nav, header, footer, .menu, .sidebar').remove();
+        
+        const scheme = {
+          id: `govtschemes-${link.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase().substring(0, 50)}`,
+          titleEn: link.title,
+          titleMr: link.title,
+          titleHi: link.title,
+          descriptionEn: '',
+          descriptionMr: '',
+          descriptionHi: '',
+          imageUrl: null,
+          documentUrl: null,
+          websiteUrl: link.url,
+          category: 'सबसिडी',
+          eligibility: [],
+          benefits: [],
+          documents: [],
+          applicationProcess: '',
+          deadline: null,
+          isActive: true,
+          source: 'govtschemes.in',
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        };
+        
+        const mainContent = $('article, .content').first();
+        
+        // Extract description
+        const introHeading = mainContent.find('h2, h3').filter((i, el) => {
+          const text = $(el).text().toLowerCase();
+          return text.includes('introduction') || text.includes('overview');
+        }).first();
+        
+        if (introHeading.length > 0) {
+          let desc = '';
+          introHeading.nextAll('p').slice(0, 3).each((i, el) => {
+            desc += $(el).text().trim() + '\n\n';
+          });
+          scheme.descriptionEn = desc.trim();
+          scheme.descriptionMr = desc.trim();
+        }
+        
+        // Extract benefits
+        const benefitsHeading = mainContent.find('h2, h3').filter((i, el) => {
+          return $(el).text().toLowerCase().includes('benefit');
+        }).first();
+        
+        if (benefitsHeading.length > 0) {
+          benefitsHeading.nextAll('ul, ol').first().find('li').each((i, el) => {
+            const text = $(el).text().trim();
+            if (text && i < 10) scheme.benefits.push(text);
+          });
+        }
+        
+        // Extract eligibility
+        const eligibilityHeading = mainContent.find('h2, h3').filter((i, el) => {
+          return $(el).text().toLowerCase().includes('eligibility');
+        }).first();
+        
+        if (eligibilityHeading.length > 0) {
+          eligibilityHeading.nextAll('ul, ol').first().find('li').each((i, el) => {
+            const text = $(el).text().trim();
+            if (text && i < 10) scheme.eligibility.push(text);
+          });
+        }
+        
+        // Extract documents
+        const documentsHeading = mainContent.find('h2, h3').filter((i, el) => {
+          return $(el).text().toLowerCase().includes('document');
+        }).first();
+        
+        if (documentsHeading.length > 0) {
+          documentsHeading.nextAll('ul, ol').first().find('li').each((i, el) => {
+            const text = $(el).text().trim();
+            if (text && i < 10) scheme.documents.push(text);
+          });
+        }
+        
+        // Extract official website
+        mainContent.find('a').each((i, el) => {
+          const href = $(el).attr('href');
+          const text = $(el).text().toLowerCase();
+          if (href && href.startsWith('http') && !href.includes('govtschemes.in')) {
+            if (text.includes('official') || text.includes('website')) {
+              scheme.websiteUrl = href;
+            }
+            if (href.includes('.pdf')) {
+              scheme.documentUrl = href;
+            }
+          }
+        });
+        
+        // Determine category
+        const titleLower = link.title.toLowerCase();
+        if (titleLower.includes('electricity') || titleLower.includes('vij') || titleLower.includes('power')) {
+          scheme.category = 'वीज';
+        } else if (titleLower.includes('insurance') || titleLower.includes('bima')) {
+          scheme.category = 'विमा';
+        } else if (titleLower.includes('loan') || titleLower.includes('credit')) {
+          scheme.category = 'कर्ज';
+        } else if (titleLower.includes('pension')) {
+          scheme.category = 'इतर';
+        }
+        
+        // Set defaults
+        if (scheme.eligibility.length === 0) {
+          scheme.eligibility = ['भारतीय नागरिक', 'शेतकरी'];
+        }
+        if (scheme.benefits.length === 0) {
+          scheme.benefits = ['सरकारी योजना लाभ'];
+        }
+        if (scheme.documents.length === 0) {
+          scheme.documents = ['आधार कार्ड', 'बँक खाते तपशील'];
+        }
+        
+        scheme.applicationProcess = 'अधिकृत वेबसाइट वर ऑनलाइन अर्ज करा';
+        
+        schemes.push(scheme);
+        console.log(`    ✅ Extracted`);
+        
+      } catch (error) {
+        console.log(`    ⚠️  Failed: ${error.message}`);
+      }
+      
+      await sleep(2000);
+    }
+    
+    console.log(`  ✅ Fetched ${schemes.length} detailed schemes from GovtSchemes.in`);
+    return schemes;
     
   } catch (error) {
     console.log(`  ⚠️  GovtSchemes.in scraping failed: ${error.message}`);
