@@ -148,13 +148,110 @@ async function fetchFromMyScheme() {
 // 2. MahaDBT - Maharashtra Direct Benefit Transfer Portal
 // ═══════════════════════════════════════════════════════════════════════════
 
+// ═══════════════════════════════════════════════════════════════════════════
+// 2. MahaDBT - Maharashtra Direct Benefit Transfer Portal
+// ═══════════════════════════════════════════════════════════════════════════
+
 async function fetchFromMahaDBT() {
   console.log('🔍 Fetching from MahaDBT...');
   
-  // MahaDBT website is not accessible for scraping
-  // Return empty array - only use live API data
-  console.log('  ℹ️  MahaDBT scraping not available - skipping');
-  return [];
+  try {
+    // Fetch main farmer portal page
+    const response = await axios.get(
+      'https://mahadbt.maharashtra.gov.in/Farmer/AgriLogin/AgriLogin',
+      { headers: HEADERS, timeout: 30000 }
+    );
+    
+    const $ = cheerio.load(response.data);
+    const schemes = [];
+    
+    // Extract scheme links
+    $('a').each((_, element) => {
+      const href = $(element).attr('href');
+      const text = $(element).text().trim();
+      
+      if (!href || !text || text.length < 5) return;
+      
+      const lowerText = text.toLowerCase();
+      
+      // Filter for farmer/agriculture schemes
+      const farmerKeywords = [
+        'शेतकरी', 'कृषी', 'शेत', 'पीक', 'किसान',
+        'farmer', 'agricult', 'crop', 'farm',
+        'ट्रॅक्टर', 'यंत्र', 'सिंचन', 'पाणी', 'कर्ज', 'विमा',
+        'tractor', 'machinery', 'irrigation', 'loan', 'insurance',
+        'अनुदान', 'subsidy', 'सबसिडी', 'योजना'
+      ];
+      
+      const excludeKeywords = ['login', 'logout', 'register', 'home', 'contact', 'about', 'तक्रार', 'प्रश्न', 'पुस्तिका'];
+      
+      const isFarmerScheme = farmerKeywords.some(k => lowerText.includes(k));
+      const isExcluded = excludeKeywords.some(k => lowerText.includes(k));
+      
+      if (isFarmerScheme && !isExcluded) {
+        let fullUrl = href;
+        if (!href.startsWith('http')) {
+          fullUrl = href.startsWith('/') 
+            ? 'https://mahadbt.maharashtra.gov.in' + href 
+            : 'https://mahadbt.maharashtra.gov.in/' + href;
+        }
+        
+        // Determine category
+        let category = 'सबसिडी';
+        if (lowerText.includes('कर्ज') || lowerText.includes('loan')) {
+          category = 'कर्ज';
+        } else if (lowerText.includes('विमा') || lowerText.includes('insurance')) {
+          category = 'विमा';
+        } else if (lowerText.includes('यंत्र') || lowerText.includes('machinery')) {
+          category = 'उपकरणे';
+        } else if (lowerText.includes('प्रशिक्षण') || lowerText.includes('training')) {
+          category = 'प्रशिक्षण';
+        } else if (lowerText.includes('सिंचन') || lowerText.includes('irrigation') || lowerText.includes('पाणी')) {
+          category = 'सिंचन';
+        }
+        
+        schemes.push({
+          id: `mahadbt-${text.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`,
+          titleEn: text,
+          titleMr: text,
+          titleHi: text,
+          descriptionEn: `${text} - Maharashtra government scheme for farmers`,
+          descriptionMr: `${text} - महाराष्ट्र शासनाची शेतकऱ्यांसाठी योजना`,
+          descriptionHi: `${text} - महाराष्ट्र सरकार की किसानों के लिए योजना`,
+          imageUrl: null,
+          documentUrl: null,
+          websiteUrl: fullUrl,
+          category: category,
+          eligibility: ['महाराष्ट्रातील शेतकरी', 'भारतीय नागरिक'],
+          benefits: ['सरकारी योजना लाभ', 'आर्थिक सहाय्य'],
+          documents: ['आधार कार्ड', '7/12 उतारा', 'बँक खाते तपशील'],
+          applicationProcess: 'MahaDBT पोर्टल वर ऑनलाइन अर्ज करा',
+          deadline: null,
+          isActive: true,
+          source: 'mahadbt.maharashtra.gov.in',
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        });
+      }
+    });
+    
+    // Remove duplicates
+    const uniqueSchemes = [];
+    const seen = new Set();
+    for (const scheme of schemes) {
+      if (!seen.has(scheme.id)) {
+        seen.add(scheme.id);
+        uniqueSchemes.push(scheme);
+      }
+    }
+    
+    console.log(`  ✅ Fetched ${uniqueSchemes.length} schemes from MahaDBT`);
+    return uniqueSchemes;
+    
+  } catch (error) {
+    console.log(`  ⚠️  MahaDBT scraping failed: ${error.message}`);
+    return [];
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════

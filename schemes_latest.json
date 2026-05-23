@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-21T17:40:27.826Z",
-  "totalSchemes": 61,
+  "lastUpdated": "2026-05-23T13:14:53.839Z",
+  "totalSchemes": 64,
   "schemes": [
     {
       "id": "myscheme-drpdhma",
@@ -29,8 +29,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.822Z",
-      "updatedAt": "2026-05-21T17:40:27.822Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-fadse",
@@ -59,8 +59,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.822Z",
-      "updatedAt": "2026-05-21T17:40:27.822Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-tmdvso",
@@ -89,8 +89,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.822Z",
-      "updatedAt": "2026-05-21T17:40:27.822Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-vtvscsgit",
@@ -119,8 +119,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.822Z",
-      "updatedAt": "2026-05-21T17:40:27.822Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-cts-maharashtra",
@@ -149,8 +149,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.822Z",
-      "updatedAt": "2026-05-21T17:40:27.822Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-msym",
@@ -179,8 +179,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.822Z",
-      "updatedAt": "2026-05-21T17:40:27.822Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-tls",
@@ -209,68 +209,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.822Z",
-      "updatedAt": "2026-05-21T17:40:27.822Z"
-    },
-    {
-      "id": "myscheme-igteicm",
-      "titleEn": "Incentive given to Encourage Inter caste Marriages",
-      "titleMr": "आंतरजातीय विवाहांना प्रोत्साहन देण्यासाठी प्रोत्साहन",
-      "titleHi": "आंतरजातीय विवाहांना प्रोत्साहन देण्यासाठी प्रोत्साहन",
-      "descriptionEn": "The \"Incentive for Encouraging Inter-Caste Marriages\" scheme is implemented by the Department of Social Justice & Special Assistance, Government of Maharashtra, and funded jointly by the State and Central Government (50:50). The scheme provides financial incentives to support inter-caste marriages.",
-      "descriptionMr": "\"आंतरजातीय विवाहांना प्रोत्साहन देण्यासाठी प्रोत्साहन\" योजना महाराष्ट्र सरकारच्या सामाजिक न्याय आणि विशेष सहाय्य विभागाद्वारे राबवली जाते आणि राज्य आणि केंद्र सरकारद्वारे (50:50) संयुक्तपणे निधी दिला जातो. ही योजना आंतरजातीय विवाहांना पाठिंबा देण्यासाठी आर्थिक प्रोत्साहन देते.",
-      "descriptionHi": "\"आंतरजातीय विवाहांना प्रोत्साहन देण्यासाठी प्रोत्साहन\" योजना महाराष्ट्र सरकारच्या सामाजिक न्याय आणि विशेष सहाय्य विभागाद्वारे राबवली जाते आणि राज्य आणि केंद्र सरकारद्वारे (50:50) संयुक्तपणे निधी दिला जातो. ही योजना आंतरजातीय विवाहांना पाठिंबा देण्यासाठी आर्थिक प्रोत्साहन देते.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://www.myscheme.gov.in/schemes/igteicm",
-      "category": "इतर",
-      "eligibility": [
-        "भारतीय नागरिक",
-        "महाराष्ट्र राज्य"
-      ],
-      "benefits": [
-        "सरकारी योजना लाभ"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.822Z",
-      "updatedAt": "2026-05-21T17:40:27.822Z"
-    },
-    {
-      "id": "myscheme-fat75opd",
-      "titleEn": "Financial Assistance to 75% or Permanent Disability",
-      "titleMr": "75 टक्के किंवा कायमस्वरूपी अपंगत्वासाठी आर्थिक सहाय्य",
-      "titleHi": "75 टक्के किंवा कायमस्वरूपी अपंगत्वासाठी आर्थिक सहाय्य",
-      "descriptionEn": "The Financial Assistance to 75% or Permanent Disability was launched by the Maharashtra Building & Other Construction Workers Welfare Board (MBOCWW), Labor Department Maharashtra. In scheme, financial assistance of ₹2,00,000/- to the registered worker in case of 75 % or more permanent disability.",
-      "descriptionMr": "महाराष्ट्र इमारत आणि इतर बांधकाम कामगार कल्याण मंडळाने (एम. बी. ओ. सी. डब्ल्यू. डब्ल्यू.), महाराष्ट्र कामगार विभागाने 75 टक्के किंवा कायमस्वरुपी अपंगत्वासाठी आर्थिक सहाय्य सुरू केले. योजनेत, 75 टक्के किंवा त्याहून अधिक कायमस्वरूपी अपंगत्व असल्यास नोंदणीकृत कामगाराला ₹ 2,00,000 चे आर्थिक सहाय्य.",
-      "descriptionHi": "महाराष्ट्र इमारत आणि इतर बांधकाम कामगार कल्याण मंडळाने (एम. बी. ओ. सी. डब्ल्यू. डब्ल्यू.), महाराष्ट्र कामगार विभागाने 75 टक्के किंवा कायमस्वरुपी अपंगत्वासाठी आर्थिक सहाय्य सुरू केले. योजनेत, 75 टक्के किंवा त्याहून अधिक कायमस्वरूपी अपंगत्व असल्यास नोंदणीकृत कामगाराला ₹ 2,00,000 चे आर्थिक सहाय्य.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://www.myscheme.gov.in/schemes/fat75opd",
-      "category": "इतर",
-      "eligibility": [
-        "भारतीय नागरिक",
-        "महाराष्ट्र राज्य"
-      ],
-      "benefits": [
-        "सरकारी योजना लाभ"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-fawwrcw",
@@ -299,8 +239,68 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
+    },
+    {
+      "id": "myscheme-fat75opd",
+      "titleEn": "Financial Assistance to 75% or Permanent Disability",
+      "titleMr": "75 टक्के किंवा कायमस्वरूपी अपंगत्वासाठी आर्थिक सहाय्य",
+      "titleHi": "75 टक्के किंवा कायमस्वरूपी अपंगत्वासाठी आर्थिक सहाय्य",
+      "descriptionEn": "The Financial Assistance to 75% or Permanent Disability was launched by the Maharashtra Building & Other Construction Workers Welfare Board (MBOCWW), Labor Department Maharashtra. In scheme, financial assistance of ₹2,00,000/- to the registered worker in case of 75 % or more permanent disability.",
+      "descriptionMr": "महाराष्ट्र इमारत आणि इतर बांधकाम कामगार कल्याण मंडळाने (एम. बी. ओ. सी. डब्ल्यू. डब्ल्यू.), महाराष्ट्र कामगार विभागाने 75 टक्के किंवा कायमस्वरुपी अपंगत्वासाठी आर्थिक सहाय्य सुरू केले. योजनेत, 75 टक्के किंवा त्याहून अधिक कायमस्वरूपी अपंगत्व असल्यास नोंदणीकृत कामगाराला ₹ 2,00,000 चे आर्थिक सहाय्य.",
+      "descriptionHi": "महाराष्ट्र इमारत आणि इतर बांधकाम कामगार कल्याण मंडळाने (एम. बी. ओ. सी. डब्ल्यू. डब्ल्यू.), महाराष्ट्र कामगार विभागाने 75 टक्के किंवा कायमस्वरुपी अपंगत्वासाठी आर्थिक सहाय्य सुरू केले. योजनेत, 75 टक्के किंवा त्याहून अधिक कायमस्वरूपी अपंगत्व असल्यास नोंदणीकृत कामगाराला ₹ 2,00,000 चे आर्थिक सहाय्य.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://www.myscheme.gov.in/schemes/fat75opd",
+      "category": "इतर",
+      "eligibility": [
+        "भारतीय नागरिक",
+        "महाराष्ट्र राज्य"
+      ],
+      "benefits": [
+        "सरकारी योजना लाभ"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
+    },
+    {
+      "id": "myscheme-igteicm",
+      "titleEn": "Incentive given to Encourage Inter caste Marriages",
+      "titleMr": "आंतरजातीय विवाहांना प्रोत्साहन देण्यासाठी प्रोत्साहन",
+      "titleHi": "आंतरजातीय विवाहांना प्रोत्साहन देण्यासाठी प्रोत्साहन",
+      "descriptionEn": "The \"Incentive for Encouraging Inter-Caste Marriages\" scheme is implemented by the Department of Social Justice & Special Assistance, Government of Maharashtra, and funded jointly by the State and Central Government (50:50). The scheme provides financial incentives to support inter-caste marriages.",
+      "descriptionMr": "\"आंतरजातीय विवाहांना प्रोत्साहन देण्यासाठी प्रोत्साहन\" योजना महाराष्ट्र सरकारच्या सामाजिक न्याय आणि विशेष सहाय्य विभागाद्वारे राबवली जाते आणि राज्य आणि केंद्र सरकारद्वारे (50:50) संयुक्तपणे निधी दिला जातो. ही योजना आंतरजातीय विवाहांना पाठिंबा देण्यासाठी आर्थिक प्रोत्साहन देते.",
+      "descriptionHi": "\"आंतरजातीय विवाहांना प्रोत्साहन देण्यासाठी प्रोत्साहन\" योजना महाराष्ट्र सरकारच्या सामाजिक न्याय आणि विशेष सहाय्य विभागाद्वारे राबवली जाते आणि राज्य आणि केंद्र सरकारद्वारे (50:50) संयुक्तपणे निधी दिला जातो. ही योजना आंतरजातीय विवाहांना पाठिंबा देण्यासाठी आर्थिक प्रोत्साहन देते.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://www.myscheme.gov.in/schemes/igteicm",
+      "category": "इतर",
+      "eligibility": [
+        "भारतीय नागरिक",
+        "महाराष्ट्र राज्य"
+      ],
+      "benefits": [
+        "सरकारी योजना लाभ"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-spremsd",
@@ -329,8 +329,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-ma-maha",
@@ -359,8 +359,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-lmmls",
@@ -389,8 +389,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-namo-shetkari-mahasanman-nidhi-yojana",
@@ -419,8 +419,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-igoapsm",
@@ -449,8 +449,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-aabym",
@@ -479,8 +479,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-fandsd",
@@ -509,8 +509,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-mcf",
@@ -539,8 +539,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-ycmvyfvjnts",
@@ -569,8 +569,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-hiip",
@@ -599,8 +599,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-faaadp",
@@ -629,8 +629,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-stiti",
@@ -659,8 +659,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-sbssps",
@@ -689,8 +689,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-pocra",
@@ -719,8 +719,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-ignwpsm",
@@ -749,8 +749,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-ptstgk",
@@ -779,8 +779,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-mkym",
@@ -809,8 +809,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-nfbsm",
@@ -839,8 +839,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-sma",
@@ -869,8 +869,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-fagcaha18",
@@ -899,8 +899,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-mi-maha",
@@ -929,8 +929,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-lts",
@@ -959,8 +959,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-lgss",
@@ -989,8 +989,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-kvdgssy",
@@ -1019,8 +1019,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-rassnb",
@@ -1049,8 +1049,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-mmlby",
@@ -1079,8 +1079,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-fatnukyv",
@@ -1109,68 +1109,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
-    },
-    {
-      "id": "myscheme-l50ss",
-      "titleEn": "LIDCOM 50% Subsidy Scheme",
-      "titleMr": "लिडकॉम 50 टक्के अनुदान योजना",
-      "titleHi": "लिडकॉम 50 टक्के अनुदान योजना",
-      "descriptionEn": "The \"50% Subsidy Scheme\" is a scheme by LIDCOM, Govt. of Maharashtra. In this scheme, 50% amount is being given as a subsidy on a maximum loan amount of ₹50,000/-. The subsidy is subject to the maximum limit of ₹10,000/-. The bank charge of interest is as per the existing rate.",
-      "descriptionMr": "50 टक्के अनुदान योजना ही महाराष्ट्र सरकारच्या एल. आय. डी. सी. ओ. एम. ची योजना आहे. या योजनेत 50 टक्के रक्कम जास्तीत जास्त 50,000/- रुपयांच्या कर्जाच्या रकमेवर अनुदान म्हणून दिली जात आहे. अनुदान जास्तीत जास्त 10,000/- रुपयांच्या मर्यादेच्या अधीन आहे. बँकेचे व्याज शुल्क सध्याच्या दरानुसार असते.",
-      "descriptionHi": "50 टक्के अनुदान योजना ही महाराष्ट्र सरकारच्या एल. आय. डी. सी. ओ. एम. ची योजना आहे. या योजनेत 50 टक्के रक्कम जास्तीत जास्त 50,000/- रुपयांच्या कर्जाच्या रकमेवर अनुदान म्हणून दिली जात आहे. अनुदान जास्तीत जास्त 10,000/- रुपयांच्या मर्यादेच्या अधीन आहे. बँकेचे व्याज शुल्क सध्याच्या दरानुसार असते.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://www.myscheme.gov.in/schemes/l50ss",
-      "category": "सबसिडी",
-      "eligibility": [
-        "भारतीय नागरिक",
-        "महाराष्ट्र राज्य"
-      ],
-      "benefits": [
-        "सरकारी योजना लाभ"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
-    },
-    {
-      "id": "myscheme-spmsd",
-      "titleEn": "State Post-metric Scholarship For Disabled",
-      "titleMr": "दिव्यांगांसाठी राज्य पोस्ट-मेट्रिक शिष्यवृत्ती",
-      "titleHi": "दिव्यांगांसाठी राज्य पोस्ट-मेट्रिक शिष्यवृत्ती",
-      "descriptionEn": "The \"State Post-metric Scholarship for Disabled\" is a scheme by the Department of Social Justice & Special Assistance, Govt. of Maharashtra. The objective of this scheme is to encourage students with disability (SwDs) to pursue higher education.",
-      "descriptionMr": "'स्टेट पोस्ट-मेट्रिक स्कॉलरशिप फॉर डिसेबल्ड' ही महाराष्ट्र सरकारच्या सामाजिक न्याय आणि विशेष सहाय्य विभागाची योजना आहे. दिव्यांग विद्यार्थ्यांना (एस. डब्ल्यू. डी.) उच्च शिक्षणासाठी प्रोत्साहित करणे हा या योजनेचा उद्देश आहे.",
-      "descriptionHi": "'स्टेट पोस्ट-मेट्रिक स्कॉलरशिप फॉर डिसेबल्ड' ही महाराष्ट्र सरकारच्या सामाजिक न्याय आणि विशेष सहाय्य विभागाची योजना आहे. दिव्यांग विद्यार्थ्यांना (एस. डब्ल्यू. डी.) उच्च शिक्षणासाठी प्रोत्साहित करणे हा या योजनेचा उद्देश आहे.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://www.myscheme.gov.in/schemes/spmsd",
-      "category": "इतर",
-      "eligibility": [
-        "भारतीय नागरिक",
-        "महाराष्ट्र राज्य"
-      ],
-      "benefits": [
-        "सरकारी योजना लाभ"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-tssad",
@@ -1199,8 +1139,68 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
+    },
+    {
+      "id": "myscheme-l50ss",
+      "titleEn": "LIDCOM 50% Subsidy Scheme",
+      "titleMr": "लिडकॉम 50 टक्के अनुदान योजना",
+      "titleHi": "लिडकॉम 50 टक्के अनुदान योजना",
+      "descriptionEn": "The \"50% Subsidy Scheme\" is a scheme by LIDCOM, Govt. of Maharashtra. In this scheme, 50% amount is being given as a subsidy on a maximum loan amount of ₹50,000/-. The subsidy is subject to the maximum limit of ₹10,000/-. The bank charge of interest is as per the existing rate.",
+      "descriptionMr": "50 टक्के अनुदान योजना ही महाराष्ट्र सरकारच्या एल. आय. डी. सी. ओ. एम. ची योजना आहे. या योजनेत 50 टक्के रक्कम जास्तीत जास्त 50,000/- रुपयांच्या कर्जाच्या रकमेवर अनुदान म्हणून दिली जात आहे. अनुदान जास्तीत जास्त 10,000/- रुपयांच्या मर्यादेच्या अधीन आहे. बँकेचे व्याज शुल्क सध्याच्या दरानुसार असते.",
+      "descriptionHi": "50 टक्के अनुदान योजना ही महाराष्ट्र सरकारच्या एल. आय. डी. सी. ओ. एम. ची योजना आहे. या योजनेत 50 टक्के रक्कम जास्तीत जास्त 50,000/- रुपयांच्या कर्जाच्या रकमेवर अनुदान म्हणून दिली जात आहे. अनुदान जास्तीत जास्त 10,000/- रुपयांच्या मर्यादेच्या अधीन आहे. बँकेचे व्याज शुल्क सध्याच्या दरानुसार असते.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://www.myscheme.gov.in/schemes/l50ss",
+      "category": "सबसिडी",
+      "eligibility": [
+        "भारतीय नागरिक",
+        "महाराष्ट्र राज्य"
+      ],
+      "benefits": [
+        "सरकारी योजना लाभ"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
+    },
+    {
+      "id": "myscheme-spmsd",
+      "titleEn": "State Post-metric Scholarship For Disabled",
+      "titleMr": "दिव्यांगांसाठी राज्य पोस्ट-मेट्रिक शिष्यवृत्ती",
+      "titleHi": "दिव्यांगांसाठी राज्य पोस्ट-मेट्रिक शिष्यवृत्ती",
+      "descriptionEn": "The \"State Post-metric Scholarship for Disabled\" is a scheme by the Department of Social Justice & Special Assistance, Govt. of Maharashtra. The objective of this scheme is to encourage students with disability (SwDs) to pursue higher education.",
+      "descriptionMr": "'स्टेट पोस्ट-मेट्रिक स्कॉलरशिप फॉर डिसेबल्ड' ही महाराष्ट्र सरकारच्या सामाजिक न्याय आणि विशेष सहाय्य विभागाची योजना आहे. दिव्यांग विद्यार्थ्यांना (एस. डब्ल्यू. डी.) उच्च शिक्षणासाठी प्रोत्साहित करणे हा या योजनेचा उद्देश आहे.",
+      "descriptionHi": "'स्टेट पोस्ट-मेट्रिक स्कॉलरशिप फॉर डिसेबल्ड' ही महाराष्ट्र सरकारच्या सामाजिक न्याय आणि विशेष सहाय्य विभागाची योजना आहे. दिव्यांग विद्यार्थ्यांना (एस. डब्ल्यू. डी.) उच्च शिक्षणासाठी प्रोत्साहित करणे हा या योजनेचा उद्देश आहे.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://www.myscheme.gov.in/schemes/spmsd",
+      "category": "इतर",
+      "eligibility": [
+        "भारतीय नागरिक",
+        "महाराष्ट्र राज्य"
+      ],
+      "benefits": [
+        "सरकारी योजना लाभ"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-fasetdp",
@@ -1229,8 +1229,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-gaoah",
@@ -1259,8 +1259,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-bhausaheb-fundkar-horticulture-plantataion-scheme",
@@ -1289,8 +1289,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-cmegp",
@@ -1319,8 +1319,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.834Z"
     },
     {
       "id": "myscheme-rcsmms",
@@ -1349,38 +1349,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
-    },
-    {
-      "id": "myscheme-fsme",
-      "titleEn": "First Self Marriage Expenses",
-      "titleMr": "स्व-विवाहाचा पहिला खर्च",
-      "titleHi": "स्व-विवाहाचा पहिला खर्च",
-      "descriptionEn": "The Maharashtra Building and Other Construction Workers Welfare Board implemented the \"First Self Marriage Expenses\" scheme. Under this scheme, financial assistance of ₹30,000/- towards the first self marriage expenses to the registered worker.",
-      "descriptionMr": "महाराष्ट्र इमारत आणि इतर बांधकाम कामगार कल्याण मंडळाने 'प्रथम विवाह खर्च' योजना राबवली. या योजनेंतर्गत, नोंदणीकृत कामगाराला पहिल्या स्वयंविवाह खर्चासाठी ₹30,000/- ची आर्थिक मदत.",
-      "descriptionHi": "महाराष्ट्र इमारत आणि इतर बांधकाम कामगार कल्याण मंडळाने 'प्रथम विवाह खर्च' योजना राबवली. या योजनेंतर्गत, नोंदणीकृत कामगाराला पहिल्या स्वयंविवाह खर्चासाठी ₹30,000/- ची आर्थिक मदत.",
-      "imageUrl": null,
-      "documentUrl": null,
-      "websiteUrl": "https://www.myscheme.gov.in/schemes/fsme",
-      "category": "इतर",
-      "eligibility": [
-        "भारतीय नागरिक",
-        "महाराष्ट्र राज्य"
-      ],
-      "benefits": [
-        "सरकारी योजना लाभ"
-      ],
-      "documents": [
-        "आधार कार्ड",
-        "बँक खाते तपशील"
-      ],
-      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
-      "deadline": null,
-      "isActive": true,
-      "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.834Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-fa",
@@ -1409,8 +1379,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-fafnd",
@@ -1439,8 +1409,38 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
+    },
+    {
+      "id": "myscheme-fsme",
+      "titleEn": "First Self Marriage Expenses",
+      "titleMr": "स्व-विवाहाचा पहिला खर्च",
+      "titleHi": "स्व-विवाहाचा पहिला खर्च",
+      "descriptionEn": "The Maharashtra Building and Other Construction Workers Welfare Board implemented the \"First Self Marriage Expenses\" scheme. Under this scheme, financial assistance of ₹30,000/- towards the first self marriage expenses to the registered worker.",
+      "descriptionMr": "महाराष्ट्र इमारत आणि इतर बांधकाम कामगार कल्याण मंडळाने 'प्रथम विवाह खर्च' योजना राबवली. या योजनेंतर्गत, नोंदणीकृत कामगाराला पहिल्या स्वयंविवाह खर्चासाठी ₹30,000/- ची आर्थिक मदत.",
+      "descriptionHi": "महाराष्ट्र इमारत आणि इतर बांधकाम कामगार कल्याण मंडळाने 'प्रथम विवाह खर्च' योजना राबवली. या योजनेंतर्गत, नोंदणीकृत कामगाराला पहिल्या स्वयंविवाह खर्चासाठी ₹30,000/- ची आर्थिक मदत.",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://www.myscheme.gov.in/schemes/fsme",
+      "category": "इतर",
+      "eligibility": [
+        "भारतीय नागरिक",
+        "महाराष्ट्र राज्य"
+      ],
+      "benefits": [
+        "सरकारी योजना लाभ"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MyScheme पोर्टल वर ऑनलाइन अर्ज करा किंवा संबंधित विभागात अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "myscheme.gov.in",
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-igndpsm",
@@ -1469,8 +1469,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-rmscitc",
@@ -1499,8 +1499,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-vntbds",
@@ -1529,8 +1529,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-sgngs",
@@ -1559,8 +1559,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-mjpjay",
@@ -1589,8 +1589,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-gopinath-munde-shetkari-apghat-suraksha-sanugrah-audhan-yojana",
@@ -1619,8 +1619,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-kpdgbcpd",
@@ -1649,8 +1649,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-spaa",
@@ -1679,8 +1679,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-ltltscosmuscp",
@@ -1709,8 +1709,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-pmtaispttshgosc",
@@ -1739,8 +1739,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-mmykpy",
@@ -1769,8 +1769,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-gsgos",
@@ -1799,8 +1799,8 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
     },
     {
       "id": "myscheme-chief-minister-sustainable-agriculture-irrigation-scheme",
@@ -1829,8 +1829,104 @@
       "deadline": null,
       "isActive": true,
       "source": "myscheme.gov.in",
-      "createdAt": "2026-05-21T17:40:27.823Z",
-      "updatedAt": "2026-05-21T17:40:27.823Z"
+      "createdAt": "2026-05-23T13:14:53.835Z",
+      "updatedAt": "2026-05-23T13:14:53.835Z"
+    },
+    {
+      "id": "mahadbt-------------",
+      "titleEn": "शेतकरी योजना",
+      "titleMr": "शेतकरी योजना",
+      "titleHi": "शेतकरी योजना",
+      "descriptionEn": "शेतकरी योजना - Maharashtra government scheme for farmers",
+      "descriptionMr": "शेतकरी योजना - महाराष्ट्र शासनाची शेतकऱ्यांसाठी योजना",
+      "descriptionHi": "शेतकरी योजना - महाराष्ट्र सरकार की किसानों के लिए योजना",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://mahadbt.maharashtra.gov.in/#",
+      "category": "सबसिडी",
+      "eligibility": [
+        "महाराष्ट्रातील शेतकरी",
+        "भारतीय नागरिक"
+      ],
+      "benefits": [
+        "सरकारी योजना लाभ",
+        "आर्थिक सहाय्य"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12 उतारा",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "mahadbt.maharashtra.gov.in",
+      "createdAt": "2026-05-23T13:14:53.721Z",
+      "updatedAt": "2026-05-23T13:14:53.721Z"
+    },
+    {
+      "id": "mahadbt-rkvy-plastic-lining-to-farm-pond",
+      "titleEn": "RKVY Plastic Lining to Farm Pond",
+      "titleMr": "RKVY Plastic Lining to Farm Pond",
+      "titleHi": "RKVY Plastic Lining to Farm Pond",
+      "descriptionEn": "RKVY Plastic Lining to Farm Pond - Maharashtra government scheme for farmers",
+      "descriptionMr": "RKVY Plastic Lining to Farm Pond - महाराष्ट्र शासनाची शेतकऱ्यांसाठी योजना",
+      "descriptionHi": "RKVY Plastic Lining to Farm Pond - महाराष्ट्र सरकार की किसानों के लिए योजना",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://mahadbt.maharashtra.gov.in/Farmer/SchemeData/SchemeData?str=E9DDFA703C38E51AD61F6F45B7D0D582",
+      "category": "सबसिडी",
+      "eligibility": [
+        "महाराष्ट्रातील शेतकरी",
+        "भारतीय नागरिक"
+      ],
+      "benefits": [
+        "सरकारी योजना लाभ",
+        "आर्थिक सहाय्य"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12 उतारा",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "mahadbt.maharashtra.gov.in",
+      "createdAt": "2026-05-23T13:14:53.721Z",
+      "updatedAt": "2026-05-23T13:14:53.721Z"
+    },
+    {
+      "id": "mahadbt-------------------------------------------------------------------------rad------",
+      "titleEn": "प्रधानमंत्री राष्ट्रीय कृषी विकास योजने अंतर्गत कोरडवाहू क्षेत्र विकास (RAD)योजना",
+      "titleMr": "प्रधानमंत्री राष्ट्रीय कृषी विकास योजने अंतर्गत कोरडवाहू क्षेत्र विकास (RAD)योजना",
+      "titleHi": "प्रधानमंत्री राष्ट्रीय कृषी विकास योजने अंतर्गत कोरडवाहू क्षेत्र विकास (RAD)योजना",
+      "descriptionEn": "प्रधानमंत्री राष्ट्रीय कृषी विकास योजने अंतर्गत कोरडवाहू क्षेत्र विकास (RAD)योजना - Maharashtra government scheme for farmers",
+      "descriptionMr": "प्रधानमंत्री राष्ट्रीय कृषी विकास योजने अंतर्गत कोरडवाहू क्षेत्र विकास (RAD)योजना - महाराष्ट्र शासनाची शेतकऱ्यांसाठी योजना",
+      "descriptionHi": "प्रधानमंत्री राष्ट्रीय कृषी विकास योजने अंतर्गत कोरडवाहू क्षेत्र विकास (RAD)योजना - महाराष्ट्र सरकार की किसानों के लिए योजना",
+      "imageUrl": null,
+      "documentUrl": null,
+      "websiteUrl": "https://mahadbt.maharashtra.gov.in/Farmer/SchemeData/SchemeData?str=E9DDFA703C38E51A1DD809A4CDCCB84A",
+      "category": "सबसिडी",
+      "eligibility": [
+        "महाराष्ट्रातील शेतकरी",
+        "भारतीय नागरिक"
+      ],
+      "benefits": [
+        "सरकारी योजना लाभ",
+        "आर्थिक सहाय्य"
+      ],
+      "documents": [
+        "आधार कार्ड",
+        "7/12 उतारा",
+        "बँक खाते तपशील"
+      ],
+      "applicationProcess": "MahaDBT पोर्टल वर ऑनलाइन अर्ज करा",
+      "deadline": null,
+      "isActive": true,
+      "source": "mahadbt.maharashtra.gov.in",
+      "createdAt": "2026-05-23T13:14:53.721Z",
+      "updatedAt": "2026-05-23T13:14:53.721Z"
     }
   ]
 }
