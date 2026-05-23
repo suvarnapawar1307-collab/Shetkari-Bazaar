@@ -270,12 +270,152 @@ async function fetchFromKrishiMaharashtra() {
 // 4. India.gov.in - National Portal
 // ═══════════════════════════════════════════════════════════════════════════
 
-async function fetchFromIndiaGov() {
-  console.log('🔍 Fetching from India.gov.in...');
+// ═══════════════════════════════════════════════════════════════════════════
+// 4. GovtSchemes.in - Government Schemes Portal
+// ═══════════════════════════════════════════════════════════════════════════
+
+async function fetchFromGovtSchemes() {
+  console.log('🔍 Fetching from GovtSchemes.in...');
   
-  // Return empty array - only use live API data
-  console.log('  ℹ️  India.gov.in scraping not available - skipping');
-  return [];
+  try {
+    const categories = [
+      'https://www.govtschemes.in/taxonomies/term/59',  // Agriculture
+      'https://www.govtschemes.in/taxonomies/term/111', // Farmer
+    ];
+    
+    let allSchemes = [];
+    
+    for (const categoryUrl of categories) {
+      const response = await axios.get(categoryUrl, { 
+        headers: HEADERS, 
+        timeout: 30000 
+      });
+      
+      const $ = cheerio.load(response.data);
+      
+      // Find scheme links
+      $('a').each((_, element) => {
+        const href = $(element).attr('href');
+        const text = $(element).text().trim();
+        
+        if (!href || !text || text.length < 10) return;
+        
+        const lowerText = text.toLowerCase();
+        const lowerHref = href.toLowerCase();
+        
+        // Check if it's Maharashtra or Central government scheme
+        const isMaharashtra = lowerText.includes('maharashtra') || lowerText.includes('महाराष्ट्र');
+        const isCentral = lowerText.includes('pradhan mantri') || 
+                         lowerText.includes('pm ') || 
+                         lowerText.includes('pm-') ||
+                         lowerText.includes('प्रधानमंत्री') ||
+                         lowerText.includes('national') ||
+                         lowerText.includes('rashtriya') ||
+                         lowerText.includes('राष्ट्रीय') ||
+                         lowerText.includes('central');
+        
+        // Exclude other state schemes
+        const otherStates = [
+          'haryana', 'gujarat', 'rajasthan', 'punjab', 'bihar', 'uttar pradesh',
+          'madhya pradesh', 'karnataka', 'tamil nadu', 'kerala', 'telangana',
+          'andhra pradesh', 'west bengal', 'odisha', 'jharkhand', 'chhattisgarh',
+          'uttarakhand', 'himachal pradesh', 'jammu', 'kashmir', 'goa',
+          'assam', 'meghalaya', 'manipur', 'tripura', 'mizoram', 'nagaland',
+          'arunachal pradesh', 'sikkim'
+        ];
+        
+        const isOtherState = otherStates.some(state => lowerText.includes(state));
+        
+        // Only include Maharashtra or Central schemes (not other states)
+        if (!isMaharashtra && !isCentral) return;
+        if (isOtherState && !isCentral) return; // Exclude other state schemes unless they're central
+        
+        // Exclude non-scheme links
+        const excludeKeywords = [
+          'subscription', 'forum', 'complaint', 'login', 'register',
+          'allschemes', 'subscribe', 'alerts', 'discussion', 'comment'
+        ];
+        
+        const isExcluded = excludeKeywords.some(k => 
+          lowerText.includes(k) || lowerHref.includes(k)
+        );
+        
+        if (isExcluded) return;
+        
+        // Must be a proper scheme link
+        const isSchemeLink = (
+          lowerText.includes('scheme') || 
+          lowerText.includes('yojana') || 
+          lowerText.includes('योजना') ||
+          (href.startsWith('/') && href.length > 10 && !href.includes('/form/'))
+        );
+        
+        if (!isSchemeLink) return;
+        
+        const fullUrl = href.startsWith('http') ? href : 'https://www.govtschemes.in' + href;
+        
+        // Determine category
+        let category = 'सबसिडी';
+        if (lowerText.includes('loan') || lowerText.includes('credit') || lowerText.includes('कर्ज')) {
+          category = 'कर्ज';
+        } else if (lowerText.includes('insurance') || lowerText.includes('bima') || lowerText.includes('विमा')) {
+          category = 'विमा';
+        } else if (lowerText.includes('training') || lowerText.includes('प्रशिक्षण')) {
+          category = 'प्रशिक्षण';
+        } else if (lowerText.includes('machinery') || lowerText.includes('tractor') || lowerText.includes('equipment') || lowerText.includes('यंत्र')) {
+          category = 'उपकरणे';
+        } else if (lowerText.includes('electricity') || lowerText.includes('vij') || lowerText.includes('वीज') || lowerText.includes('power')) {
+          category = 'वीज';
+        } else if (lowerText.includes('irrigation') || lowerText.includes('water') || lowerText.includes('सिंचन') || lowerText.includes('पाणी')) {
+          category = 'सिंचन';
+        } else if (lowerText.includes('pension') || lowerText.includes('पेन्शन')) {
+          category = 'इतर';
+        }
+        
+        allSchemes.push({
+          id: `govtschemes-${text.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase().substring(0, 50)}`,
+          titleEn: text,
+          titleMr: text,
+          titleHi: text,
+          descriptionEn: `${text} - Government scheme for farmers`,
+          descriptionMr: `${text} - शेतकऱ्यांसाठी सरकारी योजना`,
+          descriptionHi: `${text} - किसानों के लिए सरकारी योजना`,
+          imageUrl: null,
+          documentUrl: null,
+          websiteUrl: fullUrl,
+          category: category,
+          eligibility: isMaharashtra ? ['महाराष्ट्रातील शेतकरी', 'भारतीय नागरिक'] : ['भारतीय नागरिक', 'शेतकरी'],
+          benefits: ['सरकारी योजना लाभ'],
+          documents: ['आधार कार्ड', 'बँक खाते तपशील'],
+          applicationProcess: 'अधिकृत वेबसाइट वर ऑनलाइन अर्ज करा',
+          deadline: null,
+          isActive: true,
+          source: 'govtschemes.in',
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        });
+      });
+      
+      await sleep(2000);
+    }
+    
+    // Remove duplicates
+    const uniqueSchemes = [];
+    const seen = new Set();
+    for (const scheme of allSchemes) {
+      if (!seen.has(scheme.id)) {
+        seen.add(scheme.id);
+        uniqueSchemes.push(scheme);
+      }
+    }
+    
+    console.log(`  ✅ Fetched ${uniqueSchemes.length} schemes from GovtSchemes.in (Maharashtra + Central)`);
+    return uniqueSchemes;
+    
+  } catch (error) {
+    console.log(`  ⚠️  GovtSchemes.in scraping failed: ${error.message}`);
+    return [];
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -358,7 +498,7 @@ async function main() {
       fetchFromMyScheme(),
       fetchFromMahaDBT(),
       fetchFromKrishiMaharashtra(),
-      fetchFromIndiaGov(),
+      fetchFromGovtSchemes(),
     ]);
 
     // Collect successful results
