@@ -108,14 +108,18 @@ async function fetchFromMyScheme() {
             ? `https://www.myscheme.gov.in/schemes/${fields.slug}`
             : 'https://www.myscheme.gov.in';
 
+          // Use full Marathi description if available, otherwise use brief
+          const fullDescMr = fields.briefDescription || fields.briefDescriptionEng || 'सरकारी योजना';
+          const fullDescEn = fields.briefDescriptionEng || fields.briefDescription || 'Government scheme';
+
           return {
             id: `myscheme-${fields.schemeId || fields.slug || s.id || i}`,
             titleEn: fields.schemeNameEng || fields.schemeName || '',
             titleMr: fields.schemeName || fields.schemeNameEng || '',
             titleHi: fields.schemeNameHin || fields.schemeName || '',
-            descriptionEn: fields.briefDescriptionEng || fields.briefDescription || 'Government scheme',
-            descriptionMr: fields.briefDescription || fields.briefDescriptionEng || 'सरकारी योजना',
-            descriptionHi: fields.briefDescriptionHin || fields.briefDescription || 'सरकारी योजना',
+            descriptionEn: fullDescEn,
+            descriptionMr: fullDescMr,
+            descriptionHi: fields.briefDescriptionHin || fullDescMr,
             imageUrl: null,
             documentUrl: null,
             websiteUrl: websiteUrl,
