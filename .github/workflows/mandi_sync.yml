@@ -30,10 +30,29 @@ jobs:
       - name: Run Mandi Sync
         run: node msamb_scraper.js
 
-      - name: Commit mandi_latest.json to repo
+      - name: Check file changes
+        run: |
+          echo "📊 Checking mandi_latest.json status..."
+          ls -lh mandi_latest.json
+          echo ""
+          echo "Git status:"
+          git status mandi_latest.json
+          echo ""
+          echo "File diff (first 20 lines):"
+          git diff mandi_latest.json | head -20 || echo "No diff to show"
+
+      - name: Commit and push mandi_latest.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add mandi_latest.json
-          git diff --staged --quiet || git commit -m "chore: update mandi_latest.json [$(date +%Y-%m-%d)]"
-          git push
+          
+          # Check if there are changes
+          if git diff --staged --quiet; then
+            echo "ℹ️ No changes in mandi_latest.json - skipping commit"
+          else
+            echo "✅ Changes detected - committing..."
+            git commit -m "chore: update mandi_latest.json [$(date +%Y-%m-%d)]"
+            git push origin main
+            echo "✅ Successfully pushed to GitHub"
+          fi
