@@ -187,7 +187,7 @@ function makeId(commodity, market, date) {
 
 function parseHtml(html) {
   const records = [];
-  let latestDate = null;
+  let currentDate = null;
   const trMatches = html.match(/<tr>([\s\S]*?)<\/tr>/g) || [];
 
   for (const tr of trMatches) {
@@ -195,12 +195,16 @@ function parseHtml(html) {
     const cells = tdMatches.map(td => td.replace(/<[^>]+>/g,"").trim());
     if (!cells.length) continue;
 
+    // Check if this row is a date header
     if (cells.length === 1 && /^\d{2}\/\d{2}\/\d{4}$/.test(cells[0])) {
-      if (!latestDate) latestDate = cells[0];
-      else break;
+      currentDate = cells[0];
       continue;
     }
-    if (!latestDate) continue;
+    
+    // Skip if no date found yet
+    if (!currentDate) continue;
+    
+    // Skip total rows
     if (cells.some(c => c.includes("एकुण"))) continue;
 
     if (cells.length >= 7) {
@@ -217,7 +221,7 @@ function parseHtml(html) {
           maxPrice:    parseFloat(cells[5]) || 0,
           avgPrice:    parseFloat(cells[6]) || 0,
           arrivalQtl:  parseFloat(cells[3]) || 0,
-          date:        latestDate,
+          date:        currentDate,
         });
       }
     }
